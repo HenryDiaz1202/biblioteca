@@ -1,0 +1,9 @@
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.pdb
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Form1.resources
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Properties.Resources.resources
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csproj.GenerateResource.Cache
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe.licenses
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.pdb
