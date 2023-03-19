@@ -14,3 +14,4 @@ c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\D
 c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaDocumentos.resources
 c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaUsuarios.resources
 C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmDetalleDocumento.resources
+C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.Form2.resources

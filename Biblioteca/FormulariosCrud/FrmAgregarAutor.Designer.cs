@@ -30,23 +30,23 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -78,43 +78,39 @@
             this.panel1.Size = new System.Drawing.Size(744, 257);
             this.panel1.TabIndex = 2;
             // 
-            // labelControl1
+            // button2
             // 
-            this.labelControl1.Location = new System.Drawing.Point(37, 36);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(73, 13);
-            this.labelControl1.TabIndex = 3;
-            this.labelControl1.Text = "Registrar autor";
+            this.button2.Location = new System.Drawing.Point(400, 193);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Cancelar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // labelControl2
+            // button1
             // 
-            this.labelControl2.Location = new System.Drawing.Point(37, 66);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(77, 13);
-            this.labelControl2.TabIndex = 4;
-            this.labelControl2.Text = "Código de autor";
+            this.button1.Location = new System.Drawing.Point(500, 193);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Guardar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // textEdit1
+            // comboBox1
             // 
-            this.textEdit1.Location = new System.Drawing.Point(37, 85);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(245, 20);
-            this.textEdit1.TabIndex = 5;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(309, 153);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(266, 21);
+            this.comboBox1.TabIndex = 11;
             // 
-            // textEdit2
+            // labelControl5
             // 
-            this.textEdit2.Location = new System.Drawing.Point(37, 150);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(245, 20);
-            this.textEdit2.TabIndex = 7;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Location = new System.Drawing.Point(37, 131);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(42, 13);
-            this.labelControl3.TabIndex = 6;
-            this.labelControl3.Text = "Nombres";
+            this.labelControl5.Location = new System.Drawing.Point(309, 134);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(60, 13);
+            this.labelControl5.TabIndex = 10;
+            this.labelControl5.Text = "Nacionalidad";
             // 
             // textEdit3
             // 
@@ -133,39 +129,43 @@
             this.labelControl4.Text = "Apellidos";
             this.labelControl4.Click += new System.EventHandler(this.labelControl4_Click);
             // 
-            // labelControl5
+            // textEdit2
             // 
-            this.labelControl5.Location = new System.Drawing.Point(309, 134);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(60, 13);
-            this.labelControl5.TabIndex = 10;
-            this.labelControl5.Text = "Nacionalidad";
+            this.textEdit2.Location = new System.Drawing.Point(37, 150);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Size = new System.Drawing.Size(245, 20);
+            this.textEdit2.TabIndex = 7;
             // 
-            // comboBox1
+            // labelControl3
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(309, 153);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(266, 21);
-            this.comboBox1.TabIndex = 11;
+            this.labelControl3.Location = new System.Drawing.Point(37, 131);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(42, 13);
+            this.labelControl3.TabIndex = 6;
+            this.labelControl3.Text = "Nombres";
             // 
-            // button1
+            // textEdit1
             // 
-            this.button1.Location = new System.Drawing.Point(500, 193);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.textEdit1.Location = new System.Drawing.Point(37, 85);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(245, 20);
+            this.textEdit1.TabIndex = 5;
             // 
-            // button2
+            // labelControl2
             // 
-            this.button2.Location = new System.Drawing.Point(400, 193);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Cancelar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.labelControl2.Location = new System.Drawing.Point(37, 66);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(77, 13);
+            this.labelControl2.TabIndex = 4;
+            this.labelControl2.Text = "Código de autor";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(37, 36);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(73, 13);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "Registrar autor";
             // 
             // FrmAgregarAutor
             // 
@@ -175,13 +175,14 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "FrmAgregarAutor";
             this.Text = "FrmAgregarAutor";
+            this.Load += new System.EventHandler(this.FrmAgregarAutor_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

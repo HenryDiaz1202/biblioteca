@@ -8,6 +8,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using MySql.Data;
+using MySql.Data.MySqlClient;
+
 
 namespace Biblioteca.FormulariosCrud
 {
@@ -24,6 +27,11 @@ namespace Biblioteca.FormulariosCrud
         }
 
         private void labelControl4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmAgregarAutor_Load(object sender, EventArgs e)
         {
 
         }
