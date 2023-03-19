@@ -11,16 +11,11 @@ using DevExpress.XtraEditors;
 
 namespace Biblioteca.FormulariosCrud
 {
-    public partial class FrmAgregarUsuario : DevExpress.XtraEditors.XtraForm
+    public partial class FrmDetalleDocumento : DevExpress.XtraEditors.XtraForm
     {
-        public FrmAgregarUsuario()
+        public FrmDetalleDocumento()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

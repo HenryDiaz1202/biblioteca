@@ -17,5 +17,15 @@ namespace Biblioteca.FormulariosCrud
         {
             InitializeComponent();
         }
+
+        private void textEdit3_EditValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

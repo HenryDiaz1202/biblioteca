@@ -7,3 +7,10 @@ c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\D
 c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe.licenses
 c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.exe
 c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.pdb
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmAgregarAutor.resources
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmAgregarDocumento.resources
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmAgregarUsuario.resources
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaAutores.resources
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaDocumentos.resources
+c:\users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaUsuarios.resources
+C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmDetalleDocumento.resources
