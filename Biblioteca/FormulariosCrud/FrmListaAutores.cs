@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace Biblioteca.FormulariosCrud
 {
@@ -16,6 +18,16 @@ namespace Biblioteca.FormulariosCrud
         public FrmListaAutores()
         {
             InitializeComponent();
+        }
+
+        private void FrmListaAutores_Load(object sender, EventArgs e)
+        {
+            DataTable Datos_usuario = new DataTable();
+            MySqlCommand comando = new MySqlCommand();
+            string consulta = "select * from Autores;";
+            comando.CommandText = consulta;
+            Datos_usuario = Conexion.Ejecutar(comando);
+            dataGridView1.DataSource = Datos_usuario;
         }
     }
 }

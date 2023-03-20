@@ -30,11 +30,6 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -49,14 +44,19 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -95,50 +95,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(744, 525);
             this.panel1.TabIndex = 2;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(543, 251);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Actualizar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(645, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 296);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(700, 212);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // searchControl1
-            // 
-            this.searchControl1.Location = new System.Drawing.Point(21, 49);
-            this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Repository.ClearButton(),
-            new DevExpress.XtraEditors.Repository.SearchButton()});
-            this.searchControl1.Size = new System.Drawing.Size(361, 20);
-            this.searchControl1.TabIndex = 1;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(21, 30);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(155, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Lista de documentos registrados";
             // 
             // labelControl8
             // 
@@ -247,6 +203,55 @@
             this.labelControl2.TabIndex = 24;
             this.labelControl2.Text = "Código de documento";
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(543, 251);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 23;
+            this.button2.Text = "Actualizar";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(645, 251);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Eliminar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(21, 296);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(700, 212);
+            this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // searchControl1
+            // 
+            this.searchControl1.Location = new System.Drawing.Point(21, 49);
+            this.searchControl1.Name = "searchControl1";
+            this.searchControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl1.Size = new System.Drawing.Size(361, 20);
+            this.searchControl1.TabIndex = 1;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(21, 30);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(155, 13);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "Lista de documentos registrados";
+            // 
             // FrmListaDocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,15 +260,16 @@
             this.Controls.Add(this.panelControl1);
             this.Name = "FrmListaDocumentos";
             this.Text = "FrmListaDocumentos";
+            this.Load += new System.EventHandler(this.FrmListaDocumentos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
