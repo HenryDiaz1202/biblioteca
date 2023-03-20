@@ -43,7 +43,7 @@ namespace Biblioteca.FormulariosCrud
             cbCategoria.Text = (String)dataGridView1.CurrentRow.Cells[3].Value;
             txtObservacion.Text = (String)dataGridView1.CurrentRow.Cells[4].Value;
             dtPublicacion.Value = (DateTime)dataGridView1.CurrentRow.Cells[5].Value;
-            dtRegistro.Value = (DateTime)dataGridView1.CurrentRow.Cells[5].Value;
+            dtRegistro.Value = (DateTime)dataGridView1.CurrentRow.Cells[6].Value;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
