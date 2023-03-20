@@ -19,15 +19,54 @@ namespace Biblioteca.FormulariosCrud
         {
             InitializeComponent();
         }
-
-        private void FrmListaAutores_Load(object sender, EventArgs e)
-        {
+        private void actualizardatos() {
             DataTable Datos_usuario = new DataTable();
             MySqlCommand comando = new MySqlCommand();
             string consulta = "select * from Autores;";
             comando.CommandText = consulta;
             Datos_usuario = Conexion.Ejecutar(comando);
             dataGridView1.DataSource = Datos_usuario;
+        }
+        private void FrmListaAutores_Load(object sender, EventArgs e)
+        {
+            actualizardatos();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtIdAutor.Text = (String)dataGridView1.CurrentRow.Cells[0].Value;
+            txtNombres.Text = (String)dataGridView1.CurrentRow.Cells[1].Value;
+            txtApellidos.Text = (String)dataGridView1.CurrentRow.Cells[2].Value;
+            cbNacionalidad.Text = (String)dataGridView1.CurrentRow.Cells[3].Value;
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            MySqlCommand comando_ingresar = new MySqlCommand();
+            string IdAutor, Nombres, Apellidos, Nacionalidad, consulta;
+            IdAutor = txtIdAutor.Text;
+            Nombres = txtNombres.Text;
+            Apellidos = txtApellidos.Text;
+            Nacionalidad = cbNacionalidad.Text;
+
+            consulta = "UPDATE Autores SET Nombres=@Nombres, Apellidos=@Apellidos, Nacionalidad=@Nacionalidad WHERE IdAutor=@IdAutor;";
+            comando_ingresar.Parameters.Add("@Nombres", MySqlDbType.VarChar).Value = Nombres;
+            comando_ingresar.Parameters.Add("@Apellidos", MySqlDbType.VarChar).Value = Apellidos;
+            comando_ingresar.Parameters.Add("@Nacionalidad", MySqlDbType.VarChar).Value = Nacionalidad;
+            comando_ingresar.Parameters.Add("@IdAutor", MySqlDbType.VarChar).Value = IdAutor;
+            comando_ingresar.CommandText = consulta;
+
+            int resultado = Conexion.EjecutarOrden(comando_ingresar);
+            if (resultado > 0)
+            {
+                MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //limpiarcajas();
+                actualizardatos();
+            }
+            else
+            {
+                MessageBox.Show("Error al ingresar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

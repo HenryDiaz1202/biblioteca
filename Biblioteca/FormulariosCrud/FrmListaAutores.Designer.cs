@@ -30,15 +30,15 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbNacionalidad = new System.Windows.Forms.ComboBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtApellidos = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtNombres = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtIdAutor = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
@@ -46,9 +46,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtApellidos.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdAutor.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
             this.SuspendLayout();
@@ -67,32 +67,33 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbNacionalidad);
             this.panel1.Controls.Add(this.labelControl5);
-            this.panel1.Controls.Add(this.textEdit3);
+            this.panel1.Controls.Add(this.txtApellidos);
             this.panel1.Controls.Add(this.labelControl4);
-            this.panel1.Controls.Add(this.textEdit2);
+            this.panel1.Controls.Add(this.txtNombres);
             this.panel1.Controls.Add(this.labelControl3);
-            this.panel1.Controls.Add(this.textEdit1);
+            this.panel1.Controls.Add(this.txtIdAutor);
             this.panel1.Controls.Add(this.labelControl2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.searchControl1);
             this.panel1.Controls.Add(this.labelControl1);
-            this.panel1.Location = new System.Drawing.Point(67, 12);
+            this.panel1.Location = new System.Drawing.Point(69, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(744, 488);
             this.panel1.TabIndex = 1;
             // 
-            // button2
+            // btnUpdate
             // 
-            this.button2.Location = new System.Drawing.Point(583, 87);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Actualizar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(583, 87);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 23;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // button1
             // 
@@ -103,13 +104,13 @@
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbNacionalidad
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(293, 174);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(266, 21);
-            this.comboBox1.TabIndex = 21;
+            this.cbNacionalidad.FormattingEnabled = true;
+            this.cbNacionalidad.Location = new System.Drawing.Point(293, 174);
+            this.cbNacionalidad.Name = "cbNacionalidad";
+            this.cbNacionalidad.Size = new System.Drawing.Size(266, 21);
+            this.cbNacionalidad.TabIndex = 21;
             // 
             // labelControl5
             // 
@@ -119,12 +120,12 @@
             this.labelControl5.TabIndex = 20;
             this.labelControl5.Text = "Nacionalidad";
             // 
-            // textEdit3
+            // txtApellidos
             // 
-            this.textEdit3.Location = new System.Drawing.Point(293, 106);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(245, 20);
-            this.textEdit3.TabIndex = 19;
+            this.txtApellidos.Location = new System.Drawing.Point(293, 106);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Size = new System.Drawing.Size(245, 20);
+            this.txtApellidos.TabIndex = 19;
             // 
             // labelControl4
             // 
@@ -134,12 +135,12 @@
             this.labelControl4.TabIndex = 18;
             this.labelControl4.Text = "Apellidos";
             // 
-            // textEdit2
+            // txtNombres
             // 
-            this.textEdit2.Location = new System.Drawing.Point(21, 171);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(245, 20);
-            this.textEdit2.TabIndex = 17;
+            this.txtNombres.Location = new System.Drawing.Point(21, 171);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Size = new System.Drawing.Size(245, 20);
+            this.txtNombres.TabIndex = 17;
             // 
             // labelControl3
             // 
@@ -149,12 +150,12 @@
             this.labelControl3.TabIndex = 16;
             this.labelControl3.Text = "Nombres";
             // 
-            // textEdit1
+            // txtIdAutor
             // 
-            this.textEdit1.Location = new System.Drawing.Point(21, 106);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(245, 20);
-            this.textEdit1.TabIndex = 15;
+            this.txtIdAutor.Location = new System.Drawing.Point(21, 106);
+            this.txtIdAutor.Name = "txtIdAutor";
+            this.txtIdAutor.Size = new System.Drawing.Size(245, 20);
+            this.txtIdAutor.TabIndex = 15;
             // 
             // labelControl2
             // 
@@ -174,6 +175,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(700, 251);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // searchControl1
             // 
@@ -208,9 +210,9 @@
             this.panelControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtApellidos.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdAutor.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -224,15 +226,15 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.SearchControl searchControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbNacionalidad;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtApellidos;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtNombres;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtIdAutor;
         private DevExpress.XtraEditors.LabelControl labelControl2;
 
 

@@ -30,13 +30,13 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.txtIdUsuario = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
@@ -44,9 +44,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdUsuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
             this.SuspendLayout();
@@ -64,13 +64,13 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.button2);
+            this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.textEdit3);
+            this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.labelControl4);
-            this.panel1.Controls.Add(this.textEdit2);
+            this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.labelControl3);
-            this.panel1.Controls.Add(this.textEdit1);
+            this.panel1.Controls.Add(this.txtIdUsuario);
             this.panel1.Controls.Add(this.labelControl2);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.searchControl1);
@@ -80,14 +80,15 @@
             this.panel1.Size = new System.Drawing.Size(744, 488);
             this.panel1.TabIndex = 2;
             // 
-            // button2
+            // btnUpdate
             // 
-            this.button2.Location = new System.Drawing.Point(583, 87);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 23;
-            this.button2.Text = "Actualizar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnUpdate.Location = new System.Drawing.Point(583, 87);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(75, 23);
+            this.btnUpdate.TabIndex = 23;
+            this.btnUpdate.Text = "Actualizar";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // button1
             // 
@@ -98,12 +99,12 @@
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // textEdit3
+            // txtPassword
             // 
-            this.textEdit3.Location = new System.Drawing.Point(293, 106);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(245, 20);
-            this.textEdit3.TabIndex = 19;
+            this.txtPassword.Location = new System.Drawing.Point(293, 106);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(245, 20);
+            this.txtPassword.TabIndex = 19;
             // 
             // labelControl4
             // 
@@ -113,12 +114,12 @@
             this.labelControl4.TabIndex = 18;
             this.labelControl4.Text = "Contraseña";
             // 
-            // textEdit2
+            // txtUsuario
             // 
-            this.textEdit2.Location = new System.Drawing.Point(21, 171);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(245, 20);
-            this.textEdit2.TabIndex = 17;
+            this.txtUsuario.Location = new System.Drawing.Point(21, 171);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(245, 20);
+            this.txtUsuario.TabIndex = 17;
             // 
             // labelControl3
             // 
@@ -128,12 +129,12 @@
             this.labelControl3.TabIndex = 16;
             this.labelControl3.Text = "Usuario";
             // 
-            // textEdit1
+            // txtIdUsuario
             // 
-            this.textEdit1.Location = new System.Drawing.Point(21, 106);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(245, 20);
-            this.textEdit1.TabIndex = 15;
+            this.txtIdUsuario.Location = new System.Drawing.Point(21, 106);
+            this.txtIdUsuario.Name = "txtIdUsuario";
+            this.txtIdUsuario.Size = new System.Drawing.Size(245, 20);
+            this.txtIdUsuario.TabIndex = 15;
             // 
             // labelControl2
             // 
@@ -153,6 +154,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(700, 251);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // searchControl1
             // 
@@ -185,9 +187,9 @@
             this.panelControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdUsuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -198,13 +200,13 @@
 
         private DevExpress.XtraEditors.PanelControl panelControl1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button button1;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txtUsuario;
         private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtIdUsuario;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.SearchControl searchControl1;
