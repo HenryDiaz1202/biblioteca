@@ -16,5 +16,16 @@ namespace Biblioteca
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox2.Parent = pictureBox1;
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
