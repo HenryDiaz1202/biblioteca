@@ -8,6 +8,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace Biblioteca.FormulariosCrud
 {
@@ -16,6 +18,53 @@ namespace Biblioteca.FormulariosCrud
         public FrmAgregarDocumento()
         {
             InitializeComponent();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            MySqlCommand comando_ingresar = new MySqlCommand();
+
+            int NumPaginas=0;
+            string IdDocumento, Titulo, Categoria, Observacion, consulta;
+            DateTime FechaPublicacion, FechaRegistro;
+            
+            IdDocumento = txtIdDoc.Text;
+            Titulo = txtTitulo.Text;
+            NumPaginas = Int32.Parse(txtNumPaginas.Text);
+            Categoria = cbCategoria.Text;
+            Observacion = txtObservacion.Text;
+            FechaPublicacion = dtPublicacion.Value.Date;
+            FechaRegistro = dtRegistro.Value.Date;
+
+            consulta = "insert into Documentos(IdDocumento , Titulo, NumPaginas, Categoria, Observacion, FechaPublicacion, FechaRegistro) values (@IdDocumento , @Titulo, @NumPaginas, @Categoria, @Observacion, @FechaPublicacion, @FechaRegistro);";
+            comando_ingresar.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = IdDocumento;
+            comando_ingresar.Parameters.Add("@Titulo", MySqlDbType.VarChar).Value = Titulo;
+            comando_ingresar.Parameters.Add("@NumPaginas", MySqlDbType.Int32).Value = NumPaginas;
+            comando_ingresar.Parameters.Add("@Categoria", MySqlDbType.VarChar).Value = Categoria;
+            comando_ingresar.Parameters.Add("@Observacion", MySqlDbType.VarChar).Value = Observacion;
+            comando_ingresar.Parameters.Add("@FechaPublicacion", MySqlDbType.Date).Value = FechaPublicacion;
+            comando_ingresar.Parameters.Add("@FechaRegistro", MySqlDbType.Date).Value = FechaRegistro;
+
+            comando_ingresar.CommandText = consulta;
+
+            int resultado = Conexion.EjecutarOrden(comando_ingresar);
+            if (resultado > 0)
+            {
+                //MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //limpiarcajas();
+                FrmDetalleDocumento frmdetalledocumento = new FrmDetalleDocumento();
+                frmdetalledocumento.txtIdDocm.Text = txtIdDoc.Text;
+                frmdetalledocumento.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Error al ingresar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
