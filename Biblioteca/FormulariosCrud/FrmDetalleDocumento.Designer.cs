@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cbAutoresList = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.dtAutoresDoc = new System.Windows.Forms.DataGridView();
@@ -44,7 +43,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtAutoresDoc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdDocm.Properties)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +61,6 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnGuardar);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.cbAutoresList);
             this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.dtAutoresDoc);
@@ -87,6 +84,7 @@
             this.btnCancelar.TabIndex = 39;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -102,23 +100,13 @@
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Biblioteca.Properties.Resources.atras;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(41, 42);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 37;
-            this.pictureBox1.TabStop = false;
-            // 
             // cbAutoresList
             // 
             this.cbAutoresList.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbAutoresList.FormattingEnabled = true;
-            this.cbAutoresList.Location = new System.Drawing.Point(234, 53);
+            this.cbAutoresList.Location = new System.Drawing.Point(186, 45);
             this.cbAutoresList.Name = "cbAutoresList";
-            this.cbAutoresList.Size = new System.Drawing.Size(279, 31);
+            this.cbAutoresList.Size = new System.Drawing.Size(327, 31);
             this.cbAutoresList.TabIndex = 36;
             // 
             // button3
@@ -138,6 +126,7 @@
             // 
             this.dtAutoresDoc.AllowUserToAddRows = false;
             this.dtAutoresDoc.AllowUserToDeleteRows = false;
+            this.dtAutoresDoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtAutoresDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtAutoresDoc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdDocumento,
@@ -160,7 +149,7 @@
             // labelControl1
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl1.Location = new System.Drawing.Point(234, 28);
+            this.labelControl1.Location = new System.Drawing.Point(186, 20);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(55, 19);
             this.labelControl1.TabIndex = 28;
@@ -168,7 +157,7 @@
             // 
             // txtIdDocm
             // 
-            this.txtIdDocm.Location = new System.Drawing.Point(63, 54);
+            this.txtIdDocm.Location = new System.Drawing.Point(16, 46);
             this.txtIdDocm.Name = "txtIdDocm";
             this.txtIdDocm.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtIdDocm.Properties.Appearance.Options.UseFont = true;
@@ -179,7 +168,7 @@
             // labelControl2
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl2.Location = new System.Drawing.Point(63, 29);
+            this.labelControl2.Location = new System.Drawing.Point(16, 21);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(156, 19);
             this.labelControl2.TabIndex = 26;
@@ -200,7 +189,6 @@
             this.panelControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtAutoresDoc)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdDocm.Properties)).EndInit();
             this.ResumeLayout(false);
@@ -219,7 +207,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdDocumento;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdAutor;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
     }

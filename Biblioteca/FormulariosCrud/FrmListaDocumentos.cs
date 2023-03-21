@@ -45,7 +45,14 @@ namespace Biblioteca.FormulariosCrud
             dtPublicacion.Value = (DateTime)dataGridView1.CurrentRow.Cells[5].Value;
             dtRegistro.Value = (DateTime)dataGridView1.CurrentRow.Cells[6].Value;
         }
-
+        private void limpiarcajas()
+        {
+            searchControl1.Text = "";
+            txtIdDocumento.Text = "";
+            txtNumPaginas.Text = "";
+            txtObservacion.Text = "";
+            txtTitulo.Text = "";
+        }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             MySqlCommand comando_ingresar = new MySqlCommand();
@@ -77,7 +84,7 @@ namespace Biblioteca.FormulariosCrud
             if (resultado > 0)
             {
                 MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //limpiarcajas();
+                limpiarcajas();
                 actualizardatos();
 
             }
@@ -118,7 +125,7 @@ namespace Biblioteca.FormulariosCrud
                 if (resultado_doc > 0)
                 {
                     MessageBox.Show("Datos eliminados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //limpiarcajas();
+                    limpiarcajas();
                     actualizardatos();
                 }
                 else

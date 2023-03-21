@@ -40,7 +40,13 @@ namespace Biblioteca.FormulariosCrud
             txtUsuario.Text = (String)dataGridView1.CurrentRow.Cells[1].Value;
             txtPassword.Text = (String)dataGridView1.CurrentRow.Cells[2].Value;
         }
-
+        private void limpiarcajas()
+        {
+            txtIdUsuario.Text = "";
+            txtPassword.Text = "";
+            txtUsuario.Text = "";
+            searchControl1.Text = "";
+        }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             MySqlCommand comando_ingresar = new MySqlCommand();
@@ -60,7 +66,7 @@ namespace Biblioteca.FormulariosCrud
             if (resultado > 0)
             {
                 MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //limpiarcajas();
+                limpiarcajas();
                 actualizardatos();
             }
             else
@@ -80,7 +86,7 @@ namespace Biblioteca.FormulariosCrud
             if (resultado > 0)
             {
                 MessageBox.Show("Datos eliminado correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //limpiarcajas();
+                limpiarcajas();
                 actualizardatos();
             }
             else

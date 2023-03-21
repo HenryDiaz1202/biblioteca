@@ -30,7 +30,12 @@ namespace Biblioteca.FormulariosCrud
         {
             dtAutoresDoc.Rows.Add(txtIdDocm.Text,cbAutoresList.Text);
         }
-
+        private void limpiarcajas()
+        {
+            txtIdDocm.Text = "";
+            cbAutoresList.Text = "";
+            dtAutoresDoc.Rows.Clear();
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             MySqlCommand comando_ingresar = new MySqlCommand();
@@ -51,12 +56,18 @@ namespace Biblioteca.FormulariosCrud
              if (resultado > 0)
              {
                  MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 //limpiarcajas();
+                 limpiarcajas();
+                 this.Close();
              }
              else
              {
                  MessageBox.Show("Error al ingresar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
              }
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarcajas();
         }
     }
 }

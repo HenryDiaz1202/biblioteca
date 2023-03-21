@@ -20,6 +20,14 @@ namespace Biblioteca.FormulariosCrud
             InitializeComponent();
         }
 
+        private void limpiarcajas()
+        {
+            txtIdDoc.Text = "";
+            txtTitulo.Text = "";
+            txtNumPaginas.Text = "";
+            cbCategoria.Text = "";
+            txtObservacion.Text = "";
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             MySqlCommand comando_ingresar = new MySqlCommand();
@@ -51,10 +59,11 @@ namespace Biblioteca.FormulariosCrud
             if (resultado > 0)
             {
                 //MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //limpiarcajas();
+                
                 FrmDetalleDocumento frmdetalledocumento = new FrmDetalleDocumento();
                 frmdetalledocumento.txtIdDocm.Text = txtIdDoc.Text;
                 frmdetalledocumento.ShowDialog();
+                limpiarcajas();
             }
             else
             {
@@ -65,6 +74,11 @@ namespace Biblioteca.FormulariosCrud
         private void panelControl1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarcajas();
         }
     }
 }

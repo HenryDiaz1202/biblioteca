@@ -24,7 +24,11 @@ namespace Biblioteca.FormulariosCrud
         {
 
         }
-
+        private void limpiarcajas() 
+        {
+            txtPassword.Text = "";
+            txtUsuario.Text = "";
+        }
         private void btnSave_Click(object sender, EventArgs e)
         {
             MySqlCommand comando_ingresar = new MySqlCommand();
@@ -44,12 +48,17 @@ namespace Biblioteca.FormulariosCrud
             if (resultado > 0)
             {
                 MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //limpiarcajas();
+                limpiarcajas();
             }
             else
             {
                 MessageBox.Show("Error al ingresar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             } 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarcajas();
         }
     }
 }

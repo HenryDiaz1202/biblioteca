@@ -39,7 +39,14 @@ namespace Biblioteca.FormulariosCrud
             txtApellidos.Text = (String)dataGridView1.CurrentRow.Cells[2].Value;
             cbNacionalidad.Text = (String)dataGridView1.CurrentRow.Cells[3].Value;
         }
-
+        private void limpiarcajas()
+        {
+            txtApellidos.Text = "";
+            txtIdAutor.Text = "";
+            txtNombres.Text = "";
+            searchControl1.Text = "";
+            cbNacionalidad.Text = "";
+        }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             MySqlCommand comando_ingresar = new MySqlCommand();
@@ -60,7 +67,7 @@ namespace Biblioteca.FormulariosCrud
             if (resultado > 0)
             {
                 MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //limpiarcajas();
+                limpiarcajas();
                 actualizardatos();
             }
             else
@@ -80,7 +87,7 @@ namespace Biblioteca.FormulariosCrud
             if (resultado > 0)
             {
                 MessageBox.Show("Datos eliminado correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                //limpiarcajas();
+                limpiarcajas();
                 actualizardatos();
             }
             else
