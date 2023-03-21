@@ -30,6 +30,12 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.txtObservacion = new System.Windows.Forms.RichTextBox();
             this.dtRegistro = new System.Windows.Forms.DateTimePicker();
@@ -45,21 +51,15 @@
             this.txtIdDocumento = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.button2 = new System.Windows.Forms.Button();
-            this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumPaginas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdDocumento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -100,6 +100,79 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(917, 525);
             this.panel1.TabIndex = 2;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Red;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 15.25F);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(782, 289);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(114, 37);
+            this.btnCancelar.TabIndex = 43;
+            this.btnCancelar.Text = "Eliminar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Blue;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Tahoma", 15.25F);
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(651, 289);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(125, 37);
+            this.btnGuardar.TabIndex = 42;
+            this.btnGuardar.Text = "Actualizar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 15.25F);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Image = global::Biblioteca.Properties.Resources._3069190_search_research_icon__1_;
+            this.button2.Location = new System.Drawing.Point(390, 60);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(39, 27);
+            this.button2.TabIndex = 41;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // searchControl1
+            // 
+            this.searchControl1.Location = new System.Drawing.Point(23, 59);
+            this.searchControl1.Name = "searchControl1";
+            this.searchControl1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.searchControl1.Properties.Appearance.Options.UseFont = true;
+            this.searchControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Repository.ClearButton(),
+            new DevExpress.XtraEditors.Repository.SearchButton()});
+            this.searchControl1.Properties.NullValuePrompt = "Ingrese nombre de usuario a buscar ...";
+            this.searchControl1.Size = new System.Drawing.Size(361, 30);
+            this.searchControl1.TabIndex = 40;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Fuchsia;
+            this.pictureBox2.Location = new System.Drawing.Point(21, 47);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(542, 1);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 39;
+            this.pictureBox2.TabStop = false;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 16.25F);
+            this.labelControl1.Location = new System.Drawing.Point(21, 14);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(315, 27);
+            this.labelControl1.TabIndex = 38;
+            this.labelControl1.Text = "Lista de documentos registrados";
             // 
             // labelControl8
             // 
@@ -241,78 +314,6 @@
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Fuchsia;
-            this.pictureBox2.Location = new System.Drawing.Point(21, 47);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(542, 1);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 39;
-            this.pictureBox2.TabStop = false;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 16.25F);
-            this.labelControl1.Location = new System.Drawing.Point(21, 14);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(315, 27);
-            this.labelControl1.TabIndex = 38;
-            this.labelControl1.Text = "Lista de documentos registrados";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Tahoma", 15.25F);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Image = global::Biblioteca.Properties.Resources._3069190_search_research_icon__1_;
-            this.button2.Location = new System.Drawing.Point(390, 60);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(39, 27);
-            this.button2.TabIndex = 41;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // searchControl1
-            // 
-            this.searchControl1.Location = new System.Drawing.Point(23, 59);
-            this.searchControl1.Name = "searchControl1";
-            this.searchControl1.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.searchControl1.Properties.Appearance.Options.UseFont = true;
-            this.searchControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Repository.ClearButton(),
-            new DevExpress.XtraEditors.Repository.SearchButton()});
-            this.searchControl1.Properties.NullValuePrompt = "Ingrese nombre de usuario a buscar ...";
-            this.searchControl1.Size = new System.Drawing.Size(361, 30);
-            this.searchControl1.TabIndex = 40;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Red;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 15.25F);
-            this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(782, 289);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(114, 37);
-            this.btnCancelar.TabIndex = 43;
-            this.btnCancelar.Text = "Eliminar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.Blue;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Tahoma", 15.25F);
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(651, 289);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(125, 37);
-            this.btnGuardar.TabIndex = 42;
-            this.btnGuardar.Text = "Actualizar";
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
             // FrmListaDocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -326,12 +327,12 @@
             this.panelControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumPaginas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdDocumento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

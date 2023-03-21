@@ -68,5 +68,25 @@ namespace Biblioteca.FormulariosCrud
                 MessageBox.Show("Error al ingresar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            MySqlCommand comando_borar = new MySqlCommand();
+            string ID = txtIdUsuario.Text;
+            string orden = "Delete from Usuarios where IdUsuario=@IdUsuario;";
+            comando_borar.Parameters.Add("@IdUsuario", MySqlDbType.VarChar).Value = ID;
+            comando_borar.CommandText = orden;
+            int resultado = Conexion.EjecutarOrden(comando_borar);
+            if (resultado > 0)
+            {
+                MessageBox.Show("Datos eliminado correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //limpiarcajas();
+                actualizardatos();
+            }
+            else
+            {
+                MessageBox.Show("Error al eliminar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

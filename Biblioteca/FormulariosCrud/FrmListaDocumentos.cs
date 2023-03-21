@@ -96,5 +96,40 @@ namespace Biblioteca.FormulariosCrud
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            MySqlCommand comando_borar = new MySqlCommand();
+            string ID = txtIdDocumento.Text;
+
+            string orden_detalle = "Delete from DetalleDocumento where IdDocumento=@IdDocumento;";
+            string orden_documento = "Delete from Documentos where IdDocumento=@IdDocumento;";
+
+            comando_borar.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = ID;
+            comando_borar.CommandText = orden_detalle;
+            int resultado = Conexion.EjecutarOrden(comando_borar);
+            if (resultado > 0)
+            {
+                comando_borar.Parameters.Clear();
+                string ID1 = txtIdDocumento.Text;
+                comando_borar.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = ID1;
+                comando_borar.CommandText = orden_documento;
+                int resultado_doc = Conexion.EjecutarOrden(comando_borar);
+                if (resultado_doc > 0)
+                {
+                    MessageBox.Show("Datos eliminados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //limpiarcajas();
+                    actualizardatos();
+                }
+                else
+                {
+                    MessageBox.Show("Error al eliminar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Error al eliminar los datos"+e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
