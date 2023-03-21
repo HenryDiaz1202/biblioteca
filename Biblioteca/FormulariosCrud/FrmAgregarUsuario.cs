@@ -60,5 +60,10 @@ namespace Biblioteca.FormulariosCrud
         {
             limpiarcajas();
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

@@ -138,5 +138,10 @@ namespace Biblioteca.FormulariosCrud
                 MessageBox.Show("Error al eliminar los datos"+e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            actualizardatos();
+        }
     }
 }

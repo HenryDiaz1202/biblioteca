@@ -45,6 +45,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -70,6 +71,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnGuardar);
@@ -248,6 +250,16 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Lista de autores registrados";
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.simpleButton1.Location = new System.Drawing.Point(607, 76);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(114, 23);
+            this.simpleButton1.TabIndex = 29;
+            this.simpleButton1.Text = "Actualizar formulario";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // FrmListaAutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +304,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button button1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
 
 
     }
