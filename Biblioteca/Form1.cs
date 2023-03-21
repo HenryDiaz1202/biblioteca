@@ -7,6 +7,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using MySql.Data;
+using MySql.Data.MySqlClient;
 
 namespace Biblioteca
 {
@@ -62,6 +64,41 @@ namespace Biblioteca
             FrmAgregarUsuario frmagregarusuario = new FrmAgregarUsuario();
             frmagregarusuario.MdiParent = this;
             frmagregarusuario.Show();
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            Form2 login = new Form2();
+            this.Hide();
+            login.Show();
+        }
+        string direc = "C:\\RespaldoBiblioteca";
+        private void barButtonItem9_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            string fecha = System.DateTime.Today.Day.ToString() + "-" + System.DateTime.Today.Month.ToString() + "-" + System.DateTime.Today.Year.ToString();
+            string hora = System.DateTime.Now.Hour.ToString() + "-" + System.DateTime.Now.Minute.ToString();
+
+            string credenciales = "Server=localhost; Database=bibliotecasiuna; Uid=root; Pwd=;";
+            string archivo = "C:\\RespaldoBiblioteca\\BIBLIOTECA-" + fecha + "-" + hora + ".sql";
+            using (MySqlConnection conexion1 = new MySqlConnection(credenciales))
+            {
+                using (MySqlCommand comando = new MySqlCommand())
+                {
+                    using (MySqlBackup respaldo = new MySqlBackup(comando))
+                    {
+                        comando.Connection = conexion1;
+                        conexion1.Open();
+                        respaldo.ExportToFile(archivo);
+                        MessageBox.Show("El respaldo de la base de datos ha sido creado exitosamente. \n\n Dirección donde se guardó. \n " + direc + "", "Creado correctamente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        conexion1.Close();
+                    }
+                }
+            }
         }
     }
 }

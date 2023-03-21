@@ -180,9 +180,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 388);
             this.Controls.Add(this.panelControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmDetalleDocumento";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmDetalleDocumento";
             this.Load += new System.EventHandler(this.FrmDetalleDocumento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();

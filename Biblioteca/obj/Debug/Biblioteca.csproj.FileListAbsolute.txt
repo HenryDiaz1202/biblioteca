@@ -16,3 +16,5 @@ C:\Users\henry\Documents\Visual Studio 2013\Projects\Biblioteca\Biblioteca\bin\D
 C:\Users\henry\Documents\Visual Studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.exe
 C:\Users\henry\Documents\Visual Studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\Biblioteca.pdb
 C:\Users\henry\Documents\Visual Studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\MySql.Data.dll
+C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\MySqlBackup.dll
