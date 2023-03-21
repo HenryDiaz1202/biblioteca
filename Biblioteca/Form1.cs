@@ -14,6 +14,7 @@ namespace Biblioteca
 {
     public partial class Form1 : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        Form2 login = new Form2();
         public Form1()
         {
             InitializeComponent();
@@ -28,7 +29,19 @@ namespace Biblioteca
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //Con la función Hide(), se ocultan ventanas, que en este caso es la de función principal
+            this.Hide();
+            //Los if se llaman condicionales que permiten tomar una decisión u troa
+            if (login.ShowDialog() != DialogResult.OK)
+            {
+                login.Close();
+                this.Close();
+                return;
+            }
+            else
+            {
+                this.Show();
+            }
         }
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -224,6 +224,7 @@
             this.barButtonItem10.ItemAppearance.Pressed.Options.UseFont = true;
             this.barButtonItem10.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem10.LargeGlyph")));
             this.barButtonItem10.Name = "barButtonItem10";
+            this.barButtonItem10.Visibility = DevExpress.XtraBars.BarItemVisibility.Never;
             this.barButtonItem10.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem10_ItemClick);
             // 
             // barButtonItem11
