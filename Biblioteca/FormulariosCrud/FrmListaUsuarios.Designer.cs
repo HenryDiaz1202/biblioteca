@@ -30,6 +30,7 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.txtIdUsuario = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -87,6 +87,16 @@
             this.panel1.Size = new System.Drawing.Size(744, 432);
             this.panel1.TabIndex = 2;
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.simpleButton1.Location = new System.Drawing.Point(607, 32);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(114, 23);
+            this.simpleButton1.TabIndex = 30;
+            this.simpleButton1.Text = "Actualizar formulario";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // btnCancelar
             // 
             this.btnCancelar.BackColor = System.Drawing.Color.Red;
@@ -127,6 +137,7 @@
             this.button2.Size = new System.Drawing.Size(39, 27);
             this.button2.TabIndex = 32;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox2
             // 
@@ -202,6 +213,7 @@
             this.txtIdUsuario.Name = "txtIdUsuario";
             this.txtIdUsuario.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtIdUsuario.Properties.Appearance.Options.UseFont = true;
+            this.txtIdUsuario.Properties.ReadOnly = true;
             this.txtIdUsuario.Size = new System.Drawing.Size(166, 30);
             this.txtIdUsuario.TabIndex = 15;
             // 
@@ -226,16 +238,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(700, 148);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.simpleButton1.Location = new System.Drawing.Point(607, 32);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(114, 23);
-            this.simpleButton1.TabIndex = 30;
-            this.simpleButton1.Text = "Actualizar formulario";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // FrmListaUsuarios
             // 

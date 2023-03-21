@@ -30,6 +30,8 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtNumPaginas = new System.Windows.Forms.NumericUpDown();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -44,20 +46,18 @@
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtNumPaginas = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtTitulo = new DevExpress.XtraEditors.TextEdit();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtIdDocumento = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumPaginas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumPaginas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdDocumento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -76,6 +76,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtNumPaginas);
             this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnGuardar);
@@ -91,7 +92,6 @@
             this.panel1.Controls.Add(this.labelControl6);
             this.panel1.Controls.Add(this.cbCategoria);
             this.panel1.Controls.Add(this.labelControl5);
-            this.panel1.Controls.Add(this.txtNumPaginas);
             this.panel1.Controls.Add(this.labelControl4);
             this.panel1.Controls.Add(this.txtTitulo);
             this.panel1.Controls.Add(this.labelControl3);
@@ -102,6 +102,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(917, 525);
             this.panel1.TabIndex = 2;
+            // 
+            // txtNumPaginas
+            // 
+            this.txtNumPaginas.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.txtNumPaginas.Location = new System.Drawing.Point(23, 205);
+            this.txtNumPaginas.Name = "txtNumPaginas";
+            this.txtNumPaginas.Size = new System.Drawing.Size(154, 30);
+            this.txtNumPaginas.TabIndex = 45;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.simpleButton1.Location = new System.Drawing.Point(782, 25);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(114, 23);
+            this.simpleButton1.TabIndex = 44;
+            this.simpleButton1.Text = "Actualizar formulario";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // btnCancelar
             // 
@@ -143,6 +161,7 @@
             this.button2.Size = new System.Drawing.Size(39, 27);
             this.button2.TabIndex = 41;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // searchControl1
             // 
@@ -153,7 +172,7 @@
             this.searchControl1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Repository.ClearButton(),
             new DevExpress.XtraEditors.Repository.SearchButton()});
-            this.searchControl1.Properties.NullValuePrompt = "Ingrese nombre de usuario a buscar ...";
+            this.searchControl1.Properties.NullValuePrompt = "Ingrese título del documento a buscar ...";
             this.searchControl1.Size = new System.Drawing.Size(361, 30);
             this.searchControl1.TabIndex = 40;
             // 
@@ -232,8 +251,16 @@
             // 
             // cbCategoria
             // 
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Items.AddRange(new object[] {
+            "LIBRO",
+            "DOCUMENTO",
+            "MONOGRAFÍA",
+            "FOLLETO",
+            "REVISTA",
+            "INVESTIGACIÓN"});
             this.cbCategoria.Location = new System.Drawing.Point(199, 205);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(344, 31);
@@ -247,15 +274,6 @@
             this.labelControl5.Size = new System.Drawing.Size(67, 19);
             this.labelControl5.TabIndex = 30;
             this.labelControl5.Text = "Categoría";
-            // 
-            // txtNumPaginas
-            // 
-            this.txtNumPaginas.Location = new System.Drawing.Point(23, 206);
-            this.txtNumPaginas.Name = "txtNumPaginas";
-            this.txtNumPaginas.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.txtNumPaginas.Properties.Appearance.Options.UseFont = true;
-            this.txtNumPaginas.Size = new System.Drawing.Size(156, 30);
-            this.txtNumPaginas.TabIndex = 29;
             // 
             // labelControl4
             // 
@@ -290,6 +308,7 @@
             this.txtIdDocumento.Name = "txtIdDocumento";
             this.txtIdDocumento.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtIdDocumento.Properties.Appearance.Options.UseFont = true;
+            this.txtIdDocumento.Properties.ReadOnly = true;
             this.txtIdDocumento.Size = new System.Drawing.Size(156, 30);
             this.txtIdDocumento.TabIndex = 25;
             // 
@@ -316,16 +335,6 @@
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.simpleButton1.Location = new System.Drawing.Point(782, 25);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(114, 23);
-            this.simpleButton1.TabIndex = 44;
-            this.simpleButton1.Text = "Actualizar formulario";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
             // FrmListaDocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -339,9 +348,9 @@
             this.panelControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumPaginas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumPaginas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdDocumento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -362,7 +371,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private System.Windows.Forms.ComboBox cbCategoria;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtNumPaginas;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.TextEdit txtTitulo;
         private DevExpress.XtraEditors.LabelControl labelControl3;
@@ -375,5 +383,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.NumericUpDown txtNumPaginas;
     }
 }

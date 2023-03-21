@@ -30,11 +30,12 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbNacionalidad = new System.Windows.Forms.ComboBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.cbNacionalidad = new System.Windows.Forms.ComboBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.txtApellidos = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
@@ -45,7 +46,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -71,12 +71,12 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.cbNacionalidad);
             this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.cbNacionalidad);
             this.panel1.Controls.Add(this.labelControl5);
             this.panel1.Controls.Add(this.txtApellidos);
             this.panel1.Controls.Add(this.labelControl4);
@@ -92,6 +92,228 @@
             this.panel1.Size = new System.Drawing.Size(744, 517);
             this.panel1.TabIndex = 1;
             // 
+            // cbNacionalidad
+            // 
+            this.cbNacionalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbNacionalidad.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.cbNacionalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbNacionalidad.FormattingEnabled = true;
+            this.cbNacionalidad.Items.AddRange(new object[] {
+            "Afgano",
+            "Albanés",
+            "Argelino",
+            "Andorrano",
+            "Angola",
+            "Antigua o Barbudan",
+            "Argentina",
+            "armenio",
+            "Australiano",
+            "Austriaco",
+            "Azerbaiyano, azerí",
+            "Bahameño",
+            "Bahrein",
+            "bengalí",
+            "Barbados",
+            "Bielorruso",
+            "Belga",
+            "Beliceño",
+            "Beninés, Beninois",
+            "Butanés",
+            "boliviano",
+            "Bosnio o herzegovinio",
+            "Motswana, Botswana",
+            "brasileño",
+            "Bruneián",
+            "Bulgarian",
+            "Burkinabé",
+            "birmano",
+            "Burundiano",
+            "Cabo Verde",
+            "Camboyano",
+            "camerunés",
+            "canadiense",
+            "Centroafricano",
+            "Chadiano",
+            "Chileno",
+            "Chino",
+            "colombianas",
+            "Comoras, comorenses",
+            "congoleña",
+            "congoleña",
+            "Costa Rica",
+            "Marfileño",
+            "croata",
+            "Cubano",
+            "Chipriota",
+            "Checo",
+            "danés",
+            "Djibouti",
+            "Dominicanas",
+            "Dominicanas",
+            "Timorense",
+            "ecuatoriano",
+            "Egipcio",
+            "salvadoreño",
+            "Ecuatoguineano, ecuatoguineano",
+            "Eritreo",
+            "Estonia",
+            "etíope",
+            "Fijian",
+            "Finnish",
+            "Francés",
+            "Gabonés",
+            "Gambiano",
+            "georgiano",
+            "Alemán",
+            "ghanés",
+            "Gibraltar",
+            "Griego, helénico",
+            "Granada",
+            "guatemalteco",
+            "Guineano",
+            "Bissau-Guineano",
+            "Guyana",
+            "danza del África Occidental, danza afro haitiana,",
+            "hondureña",
+            "Húngaro, Magyar",
+            "islandés",
+            "indio",
+            "Indonesian",
+            "Iraní, persa",
+            "iraquí",
+            "irlandés",
+            "israelí",
+            "Italiano",
+            "Marfileño",
+            "jamaicano",
+            "Japonés",
+            "Jordano",
+            "Kazajo, kazajo",
+            "Keniano",
+            "I-Kiribati",
+            "Norcoreano",
+            "Surcoreano",
+            "Kuwaití",
+            "Kirguistán, Kirguistán, Kirgiz, Kirguizistán",
+            "Lao, laosiano",
+            "Letón, Lettish",
+            "libanés",
+            "Basotho",
+            "Liberiano",
+            "Libio",
+            "Liechtenstein",
+            "lituano",
+            "Luxemburgo, luxemburgués",
+            "macedonio",
+            "madagascarí",
+            "Malawiano",
+            "Malasio",
+            "Maldivas",
+            "Maliense, Malinés",
+            "maltés",
+            "Islas Marshall",
+            "Martiniquais, Martinica",
+            "mauritano",
+            "mauriciano",
+            "Mexicano",
+            "Micronesia",
+            "Moldavo",
+            "Monégasque, Monacan",
+            "mongol",
+            "montenegrino",
+            "marroquí",
+            "mozambiqueño",
+            "namibio",
+            "nauruana",
+            "Nepalí, nepalí",
+            "Holandés, neerlandés",
+            "Nueva Zelanda, Nueva Zelanda, Zelanian",
+            "nicaragüense",
+            "Nigeriano",
+            "Nigeriano",
+            "Marianan del norte",
+            "Norwegian",
+            "omaní",
+            "Paquistaní",
+            "Palauan",
+            "palestino",
+            "panameño",
+            "Papua Nueva Guinea, Papuan",
+            "paraguayo",
+            "peruano",
+            "Filipino, filipino",
+            "polaco",
+            "Portuguese",
+            "puertorriqueño",
+            "Qatar",
+            "rumano",
+            "Ruso",
+            "Ruandés",
+            "Kittitian o Nevisian",
+            "Saint Lucian",
+            "San Vicente, Vicentino",
+            "Samoano",
+            "Sammarinese",
+            "São Toméan",
+            "Arabia Saudita, Arabia Saudita",
+            "Senegal",
+            "serbio",
+            "Seychelles",
+            "Sierra Leona",
+            "Singapur, Singapur",
+            "Slovak",
+            "Esloveno, esloveno",
+            "Solomon Island",
+            "somalí",
+            "sudafricano",
+            "Sudán del sur",
+            "Español",
+            "de Sri Lanka",
+            "sudanés",
+            "surinamés",
+            "Swazi",
+            "Swedish",
+            "suizo",
+            "Sirio",
+            "Tajikistani",
+            "Tanzania",
+            "Thai",
+            "Timorense",
+            "Togolés",
+            "Tokelauan",
+            "Tonga",
+            "Trinidad y Tobago",
+            "tunecino",
+            "turco",
+            "Turkmenistán",
+            "tuvaluano",
+            "Uganda",
+            "ucranio",
+            "Emirati, Emirian, Emiri",
+            "Reino Unido, Británico",
+            "Estadounidense",
+            "uruguayo",
+            "Uzbeko, uzbeko",
+            "venezolano",
+            "vietnamita",
+            "yemenita",
+            "Zambia",
+            "zimbabuo"});
+            this.cbNacionalidad.Location = new System.Drawing.Point(319, 218);
+            this.cbNacionalidad.Name = "cbNacionalidad";
+            this.cbNacionalidad.Size = new System.Drawing.Size(266, 31);
+            this.cbNacionalidad.TabIndex = 30;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
+            this.simpleButton1.Location = new System.Drawing.Point(607, 76);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(114, 23);
+            this.simpleButton1.TabIndex = 29;
+            this.simpleButton1.Text = "Actualizar formulario";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
@@ -104,6 +326,7 @@
             this.button1.Size = new System.Drawing.Size(39, 27);
             this.button1.TabIndex = 28;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnCancelar
             // 
@@ -142,15 +365,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 24;
             this.pictureBox2.TabStop = false;
-            // 
-            // cbNacionalidad
-            // 
-            this.cbNacionalidad.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.cbNacionalidad.FormattingEnabled = true;
-            this.cbNacionalidad.Location = new System.Drawing.Point(319, 217);
-            this.cbNacionalidad.Name = "cbNacionalidad";
-            this.cbNacionalidad.Size = new System.Drawing.Size(266, 31);
-            this.cbNacionalidad.TabIndex = 21;
             // 
             // labelControl5
             // 
@@ -203,6 +417,7 @@
             this.txtIdAutor.Name = "txtIdAutor";
             this.txtIdAutor.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtIdAutor.Properties.Appearance.Options.UseFont = true;
+            this.txtIdAutor.Properties.ReadOnly = true;
             this.txtIdAutor.Size = new System.Drawing.Size(271, 30);
             this.txtIdAutor.TabIndex = 15;
             // 
@@ -250,16 +465,6 @@
             this.labelControl1.TabIndex = 0;
             this.labelControl1.Text = "Lista de autores registrados";
             // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.simpleButton1.Location = new System.Drawing.Point(607, 76);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(114, 23);
-            this.simpleButton1.TabIndex = 29;
-            this.simpleButton1.Text = "Actualizar formulario";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
-            // 
             // FrmListaAutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,7 +497,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private DevExpress.XtraEditors.SearchControl searchControl1;
         private DevExpress.XtraEditors.LabelControl labelControl1;
-        private System.Windows.Forms.ComboBox cbNacionalidad;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.TextEdit txtApellidos;
         private DevExpress.XtraEditors.LabelControl labelControl4;
@@ -305,6 +509,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button button1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private System.Windows.Forms.ComboBox cbNacionalidad;
 
 
     }

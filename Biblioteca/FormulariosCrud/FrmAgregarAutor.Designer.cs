@@ -136,6 +136,7 @@
             // 
             // cbNacionalidad
             // 
+            this.cbNacionalidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNacionalidad.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbNacionalidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cbNacionalidad.FormattingEnabled = true;
@@ -332,11 +333,9 @@
             "ucranio",
             "Emirati, Emirian, Emiri",
             "Reino Unido, Británico",
-            "Estados Unidos, EE. UU., Estadounidense",
+            "Estadounidense",
             "uruguayo",
             "Uzbeko, uzbeko",
-            "Ni-Vanuatu, Vanuatuán",
-            "Vaticano",
             "venezolano",
             "vietnamita",
             "yemenita",

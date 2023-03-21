@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbCategoria = new System.Windows.Forms.ComboBox();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.txtNumPaginas = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
@@ -49,14 +48,15 @@
             this.txtIdDoc = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.txtNumPaginas = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumPaginas.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdDoc.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumPaginas)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -73,9 +73,9 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtNumPaginas);
             this.panel1.Controls.Add(this.cbCategoria);
             this.panel1.Controls.Add(this.labelControl5);
-            this.panel1.Controls.Add(this.txtNumPaginas);
             this.panel1.Controls.Add(this.labelControl4);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnGuardar);
@@ -99,9 +99,17 @@
             // 
             // cbCategoria
             // 
+            this.cbCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategoria.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cbCategoria.FormattingEnabled = true;
+            this.cbCategoria.Items.AddRange(new object[] {
+            "LIBRO",
+            "DOCUMENTO",
+            "MONOGRAFÍA",
+            "FOLLETO",
+            "REVISTA",
+            "INVESTIGACIÓN"});
             this.cbCategoria.Location = new System.Drawing.Point(771, 172);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(173, 31);
@@ -115,17 +123,6 @@
             this.labelControl5.Size = new System.Drawing.Size(67, 19);
             this.labelControl5.TabIndex = 25;
             this.labelControl5.Text = "Categoría";
-            // 
-            // txtNumPaginas
-            // 
-            this.txtNumPaginas.Location = new System.Drawing.Point(647, 173);
-            this.txtNumPaginas.Name = "txtNumPaginas";
-            this.txtNumPaginas.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.txtNumPaginas.Properties.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNumPaginas.Properties.Appearance.Options.UseFont = true;
-            this.txtNumPaginas.Properties.Appearance.Options.UseForeColor = true;
-            this.txtNumPaginas.Size = new System.Drawing.Size(118, 30);
-            this.txtNumPaginas.TabIndex = 24;
             // 
             // labelControl4
             // 
@@ -286,6 +283,14 @@
             this.labelControl1.TabIndex = 3;
             this.labelControl1.Text = "Registrar documento";
             // 
+            // txtNumPaginas
+            // 
+            this.txtNumPaginas.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.txtNumPaginas.Location = new System.Drawing.Point(647, 173);
+            this.txtNumPaginas.Name = "txtNumPaginas";
+            this.txtNumPaginas.Size = new System.Drawing.Size(120, 30);
+            this.txtNumPaginas.TabIndex = 27;
+            // 
             // FrmAgregarDocumento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -298,11 +303,11 @@
             this.panelControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumPaginas.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdDoc.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumPaginas)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -328,7 +333,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.ComboBox cbCategoria;
         private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.TextEdit txtNumPaginas;
         private DevExpress.XtraEditors.LabelControl labelControl4;
+        private System.Windows.Forms.NumericUpDown txtNumPaginas;
     }
 }

@@ -100,5 +100,20 @@ namespace Biblioteca.FormulariosCrud
         {
             actualizardatos();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataTable Datos_usuario = new DataTable();
+            MySqlCommand comando = new MySqlCommand();
+
+            string IdAutor;
+            IdAutor = searchControl1.Text;
+
+            string consulta = "select * from Autores WHERE Nombres LIKE'%" + IdAutor + "%';";
+
+            comando.CommandText = consulta;
+            Datos_usuario = Conexion.Ejecutar(comando);
+            dataGridView1.DataSource = Datos_usuario;
+        }
     }
 }
