@@ -47,25 +47,38 @@ namespace Biblioteca.FormulariosCrud
         private void btnSave_Click(object sender, EventArgs e)
         {
             MySqlCommand comando_ingresar = new MySqlCommand();
+            MySqlCommand comando_ingresar_stock = new MySqlCommand();
 
-            string consulta;
-            int resultado = 0;
+            string consulta, consultastock;
+            int resultado = 0, resultadostock=0;
+
+            string IdDoc = txtIdDocm.Text;
+            int Cant = Int32.Parse(lblNumRegistro.Text);
 
             consulta = "INSERT INTO detalledocumento (IdDocumento, IdAutor) values (@IdDocumento, @IdAutor)";
+            consultastock = "INSERT INTO stockdocumentos (IdDocumento, CantidadDisponible) values (@IdDocumento, @CantidadDisponible)";
 
              foreach (DataGridViewRow row in dtAutoresDoc.Rows)
-                {
+             {
                     comando_ingresar.Parameters.Clear();
                     comando_ingresar.Parameters.AddWithValue("@IdDocumento", Convert.ToString(row.Cells["IdDocumento"].Value));
                     comando_ingresar.Parameters.AddWithValue("@IdAutor", Convert.ToString(row.Cells["IdAutor"].Value));
                     comando_ingresar.CommandText = consulta;
                     resultado = Conexion.EjecutarOrden(comando_ingresar);
-                }
+             }
              if (resultado > 0)
              {
-                 MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 limpiarcajas();
-                 this.Close();
+                 comando_ingresar_stock.Parameters.Clear();
+                 comando_ingresar_stock.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = IdDoc;
+                 comando_ingresar_stock.Parameters.Add("@CantidadDisponible", MySqlDbType.Int32).Value = Cant;
+                 comando_ingresar_stock.CommandText = consultastock;
+                 resultadostock = Conexion.EjecutarOrden(comando_ingresar_stock);
+                 if (resultadostock > 0)
+                  {
+                      MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                      limpiarcajas();
+                      this.Close();
+                  }
              }
              else
              {
@@ -79,6 +92,11 @@ namespace Biblioteca.FormulariosCrud
         }
 
         private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

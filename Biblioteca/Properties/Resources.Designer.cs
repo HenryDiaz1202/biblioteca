@@ -83,6 +83,16 @@ namespace Biblioteca.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1282956_close_delete_deny_no_out_icon {
+            get {
+                object obj = ResourceManager.GetObject("1282956_close_delete_deny_no_out_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3069190_search_research_icon {
             get {
                 object obj = ResourceManager.GetObject("3069190_search_research_icon", resourceCulture);

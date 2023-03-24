@@ -58,10 +58,13 @@ namespace Biblioteca.FormulariosCrud
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             MySqlCommand comando_ingresar = new MySqlCommand();
+            MySqlCommand comando_update_docs = new MySqlCommand();
 
             int NumPaginas = 0, CantidadRegistro=0;
             string IdDocumento, Titulo, Categoria, Observacion, consulta;
             DateTime FechaPublicacion, FechaRegistro;
+
+            string update_docs = "UPDATE StockDocumentos SET CantidadDisponible=@CantidadDisponible WHERE IdDocumento=@IdDocumento;";
 
             IdDocumento = txtIdDocumento.Text;
             Titulo = txtTitulo.Text;
@@ -81,20 +84,28 @@ namespace Biblioteca.FormulariosCrud
             comando_ingresar.Parameters.Add("@FechaRegistro", MySqlDbType.Date).Value = FechaRegistro;
             comando_ingresar.Parameters.Add("@CantidadRegistrar", MySqlDbType.Int32).Value = CantidadRegistro;
             comando_ingresar.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = IdDocumento;
-
             comando_ingresar.CommandText = consulta;
-
             int resultado = Conexion.EjecutarOrden(comando_ingresar);
             if (resultado > 0)
             {
-                MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                limpiarcajas();
-                actualizardatos();
 
+                comando_update_docs.Parameters.Add("@CantidadDisponible", MySqlDbType.Int32).Value = CantidadRegistro;
+                comando_update_docs.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = IdDocumento;
+                comando_update_docs.CommandText = update_docs;
+                int resultado_doc = Conexion.EjecutarOrden(comando_update_docs);
+                if (resultado_doc > 0)
+                {
+                    MessageBox.Show("Datos actualizados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    limpiarcajas();
+                    actualizardatos();
+                }
+                else
+                {
+                    MessageBox.Show("Error al eliminar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             else
             {
-                MessageBox.Show("Error al ingresar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -111,35 +122,46 @@ namespace Biblioteca.FormulariosCrud
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             MySqlCommand comando_borar = new MySqlCommand();
+            MySqlCommand comando_borar_stock = new MySqlCommand();
             string ID = txtIdDocumento.Text;
 
+            string orden_stock = "Delete from StockDocumentos where IdDocumento=@IdDocumento;";
             string orden_detalle = "Delete from DetalleDocumento where IdDocumento=@IdDocumento;";
             string orden_documento = "Delete from Documentos where IdDocumento=@IdDocumento;";
 
-            comando_borar.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = ID;
-            comando_borar.CommandText = orden_detalle;
-            int resultado = Conexion.EjecutarOrden(comando_borar);
-            if (resultado > 0)
+            comando_borar_stock.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = ID;
+            comando_borar_stock.CommandText = orden_stock;
+            int result = Conexion.EjecutarOrden(comando_borar_stock);
+            if (result > 0)
             {
-                comando_borar.Parameters.Clear();
-                string ID1 = txtIdDocumento.Text;
-                comando_borar.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = ID1;
-                comando_borar.CommandText = orden_documento;
-                int resultado_doc = Conexion.EjecutarOrden(comando_borar);
-                if (resultado_doc > 0)
+                comando_borar.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = ID;
+                comando_borar.CommandText = orden_detalle;
+                int resultado = Conexion.EjecutarOrden(comando_borar);
+                if (resultado > 0)
                 {
-                    MessageBox.Show("Datos eliminados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    limpiarcajas();
-                    actualizardatos();
+                    comando_borar.Parameters.Clear();
+                    string ID1 = txtIdDocumento.Text;
+                    comando_borar.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = ID1;
+                    comando_borar.CommandText = orden_documento;
+                    int resultado_doc = Conexion.EjecutarOrden(comando_borar);
+                    if (resultado_doc > 0)
+                    {
+                        MessageBox.Show("Datos eliminados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        limpiarcajas();
+                        actualizardatos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al eliminar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Error al eliminar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Error al eliminar los datos"+e.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
 
@@ -161,6 +183,13 @@ namespace Biblioteca.FormulariosCrud
             comando.CommandText = consulta;
             Datos_usuario = Conexion.Ejecutar(comando);
             dataGridView1.DataSource = Datos_usuario;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmEditAutorDocumento frmeditautoresdoc = new FrmEditAutorDocumento();
+            frmeditautoresdoc.txtIdDocm.Text = txtIdDocumento.Text;
+            frmeditautoresdoc.ShowDialog();
         }
     }
 }

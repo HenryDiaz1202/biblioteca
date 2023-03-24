@@ -109,6 +109,12 @@
     <Compile Include="FormulariosCrud\FrmDetalleDocumento.Designer.cs">
       <DependentUpon>FrmDetalleDocumento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormulariosCrud\FrmEditAutorDocumento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosCrud\FrmEditAutorDocumento.Designer.cs">
+      <DependentUpon>FrmEditAutorDocumento.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormulariosCrud\FrmListaAutores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosCrud\FrmDetalleDocumento.resx">
       <DependentUpon>FrmDetalleDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosCrud\FrmEditAutorDocumento.resx">
+      <DependentUpon>FrmEditAutorDocumento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosCrud\FrmListaAutores.resx">
       <DependentUpon>FrmListaAutores.cs</DependentUpon>
@@ -211,6 +220,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\3069190_search_research_icon %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1282956_close_delete_deny_no_out_icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

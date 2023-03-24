@@ -19,3 +19,4 @@ C:\Users\henry\Documents\Visual Studio 2013\Projects\Biblioteca\Biblioteca\obj\D
 C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\MySql.Data.dll
 C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\bin\Debug\MySqlBackup.dll
 C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmAgregarPrestamo_cs.resources
+C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmEditAutorDocumento.resources
