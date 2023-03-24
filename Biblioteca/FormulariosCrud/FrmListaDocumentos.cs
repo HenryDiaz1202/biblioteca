@@ -44,6 +44,7 @@ namespace Biblioteca.FormulariosCrud
             txtObservacion.Text = (String)dataGridView1.CurrentRow.Cells[4].Value;
             dtPublicacion.Value = (DateTime)dataGridView1.CurrentRow.Cells[5].Value;
             dtRegistro.Value = (DateTime)dataGridView1.CurrentRow.Cells[6].Value;
+            txtCantidadRegistrada.Text = (String)dataGridView1.CurrentRow.Cells[7].Value.ToString();
         }
         private void limpiarcajas()
         {
@@ -52,12 +53,13 @@ namespace Biblioteca.FormulariosCrud
             txtNumPaginas.Text = "";
             txtObservacion.Text = "";
             txtTitulo.Text = "";
+            txtCantidadRegistrada.Text = "";
         }
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             MySqlCommand comando_ingresar = new MySqlCommand();
 
-            int NumPaginas = 0;
+            int NumPaginas = 0, CantidadRegistro=0;
             string IdDocumento, Titulo, Categoria, Observacion, consulta;
             DateTime FechaPublicacion, FechaRegistro;
 
@@ -68,14 +70,16 @@ namespace Biblioteca.FormulariosCrud
             Observacion = txtObservacion.Text;
             FechaPublicacion = dtPublicacion.Value.Date;
             FechaRegistro = dtRegistro.Value.Date;
+            CantidadRegistro = Int32.Parse(txtCantidadRegistrada.Text);
 
-            consulta = "UPDATE Documentos SET Titulo=@Titulo, NumPaginas=@NumPaginas, Categoria=@Categoria, Observacion=@Observacion, FechaPublicacion=@FechaPublicacion, FechaRegistro=@FechaRegistro WHERE IdDocumento=@IdDocumento;";
+            consulta = "UPDATE Documentos SET Titulo=@Titulo, NumPaginas=@NumPaginas, Categoria=@Categoria, Observacion=@Observacion, FechaPublicacion=@FechaPublicacion, FechaRegistro=@FechaRegistro, CantidadRegistrar=@CantidadRegistrar WHERE IdDocumento=@IdDocumento;";
             comando_ingresar.Parameters.Add("@Titulo", MySqlDbType.VarChar).Value = Titulo;
             comando_ingresar.Parameters.Add("@NumPaginas", MySqlDbType.Int32).Value = NumPaginas;
             comando_ingresar.Parameters.Add("@Categoria", MySqlDbType.VarChar).Value = Categoria;
             comando_ingresar.Parameters.Add("@Observacion", MySqlDbType.VarChar).Value = Observacion;
             comando_ingresar.Parameters.Add("@FechaPublicacion", MySqlDbType.Date).Value = FechaPublicacion;
             comando_ingresar.Parameters.Add("@FechaRegistro", MySqlDbType.Date).Value = FechaRegistro;
+            comando_ingresar.Parameters.Add("@CantidadRegistrar", MySqlDbType.Int32).Value = CantidadRegistro;
             comando_ingresar.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = IdDocumento;
 
             comando_ingresar.CommandText = consulta;

@@ -32,7 +32,7 @@ namespace Biblioteca.FormulariosCrud
         {
             MySqlCommand comando_ingresar = new MySqlCommand();
 
-            int NumPaginas=0;
+            int NumPaginas=0, CantidadRegistro=0;
             string IdDocumento, Titulo, Categoria, Observacion, consulta;
             DateTime FechaPublicacion, FechaRegistro;
             
@@ -43,8 +43,9 @@ namespace Biblioteca.FormulariosCrud
             Observacion = txtObservacion.Text;
             FechaPublicacion = dtPublicacion.Value.Date;
             FechaRegistro = dtRegistro.Value.Date;
+            CantidadRegistro = Int32.Parse(txtCantidadRegistro.Text);
 
-            consulta = "insert into Documentos(IdDocumento , Titulo, NumPaginas, Categoria, Observacion, FechaPublicacion, FechaRegistro) values (@IdDocumento , @Titulo, @NumPaginas, @Categoria, @Observacion, @FechaPublicacion, @FechaRegistro);";
+            consulta = "insert into Documentos(IdDocumento , Titulo, NumPaginas, Categoria, Observacion, FechaPublicacion, FechaRegistro, CantidadRegistrar) values (@IdDocumento , @Titulo, @NumPaginas, @Categoria, @Observacion, @FechaPublicacion, @FechaRegistro, @CantidadRegistrar);";
             comando_ingresar.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = IdDocumento;
             comando_ingresar.Parameters.Add("@Titulo", MySqlDbType.VarChar).Value = Titulo;
             comando_ingresar.Parameters.Add("@NumPaginas", MySqlDbType.Int32).Value = NumPaginas;
@@ -52,6 +53,7 @@ namespace Biblioteca.FormulariosCrud
             comando_ingresar.Parameters.Add("@Observacion", MySqlDbType.VarChar).Value = Observacion;
             comando_ingresar.Parameters.Add("@FechaPublicacion", MySqlDbType.Date).Value = FechaPublicacion;
             comando_ingresar.Parameters.Add("@FechaRegistro", MySqlDbType.Date).Value = FechaRegistro;
+            comando_ingresar.Parameters.Add("@CantidadRegistrar", MySqlDbType.Int32).Value = CantidadRegistro;
 
             comando_ingresar.CommandText = consulta;
 

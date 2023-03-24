@@ -91,6 +91,12 @@
     <Compile Include="FormulariosCrud\FrmAgregarDocumento.Designer.cs">
       <DependentUpon>FrmAgregarDocumento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormulariosCrud\FrmAgregarPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosCrud\FrmAgregarPrestamo.Designer.cs">
+      <DependentUpon>FrmAgregarPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormulariosCrud\FrmAgregarUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosCrud\FrmAgregarDocumento.resx">
       <DependentUpon>FrmAgregarDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosCrud\FrmAgregarPrestamo.resx">
+      <DependentUpon>FrmAgregarPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosCrud\FrmAgregarUsuario.resx">
       <DependentUpon>FrmAgregarUsuario.cs</DependentUpon>

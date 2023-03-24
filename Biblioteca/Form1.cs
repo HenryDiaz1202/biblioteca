@@ -118,5 +118,12 @@ namespace Biblioteca
         {
 
         }
+
+        private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmAgregarPrestamo_cs frmprestamos = new FrmAgregarPrestamo_cs();
+            frmprestamos.MdiParent = this;
+            frmprestamos.Show();
+        }
     }
 }

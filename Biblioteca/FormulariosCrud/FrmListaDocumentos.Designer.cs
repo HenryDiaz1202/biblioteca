@@ -52,6 +52,8 @@
             this.txtIdDocumento = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtCantidadRegistrada = new System.Windows.Forms.NumericUpDown();
+            this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -61,6 +63,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdDocumento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadRegistrada)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -76,6 +79,8 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.txtCantidadRegistrada);
+            this.panel1.Controls.Add(this.labelControl9);
             this.panel1.Controls.Add(this.txtNumPaginas);
             this.panel1.Controls.Add(this.simpleButton1);
             this.panel1.Controls.Add(this.btnCancelar);
@@ -127,7 +132,7 @@
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Tahoma", 15.25F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(782, 289);
+            this.btnCancelar.Location = new System.Drawing.Point(782, 279);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(114, 37);
             this.btnCancelar.TabIndex = 43;
@@ -141,7 +146,7 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Tahoma", 15.25F);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(651, 289);
+            this.btnGuardar.Location = new System.Drawing.Point(651, 279);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(125, 37);
             this.btnGuardar.TabIndex = 42;
@@ -198,7 +203,7 @@
             // labelControl8
             // 
             this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl8.Location = new System.Drawing.Point(23, 244);
+            this.labelControl8.Location = new System.Drawing.Point(199, 246);
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(87, 19);
             this.labelControl8.TabIndex = 37;
@@ -207,9 +212,9 @@
             // txtObservacion
             // 
             this.txtObservacion.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.txtObservacion.Location = new System.Drawing.Point(23, 272);
+            this.txtObservacion.Location = new System.Drawing.Point(199, 272);
             this.txtObservacion.Name = "txtObservacion";
-            this.txtObservacion.Size = new System.Drawing.Size(608, 54);
+            this.txtObservacion.Size = new System.Drawing.Size(432, 54);
             this.txtObservacion.TabIndex = 36;
             this.txtObservacion.Text = "";
             // 
@@ -335,6 +340,23 @@
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // txtCantidadRegistrada
+            // 
+            this.txtCantidadRegistrada.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.txtCantidadRegistrada.Location = new System.Drawing.Point(23, 274);
+            this.txtCantidadRegistrada.Name = "txtCantidadRegistrada";
+            this.txtCantidadRegistrada.Size = new System.Drawing.Size(154, 30);
+            this.txtCantidadRegistrada.TabIndex = 47;
+            // 
+            // labelControl9
+            // 
+            this.labelControl9.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.labelControl9.Location = new System.Drawing.Point(23, 246);
+            this.labelControl9.Name = "labelControl9";
+            this.labelControl9.Size = new System.Drawing.Size(137, 19);
+            this.labelControl9.TabIndex = 46;
+            this.labelControl9.Text = "Cantidad registrada";
+            // 
             // FrmListaDocumentos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -354,6 +376,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtTitulo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdDocumento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtCantidadRegistrada)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -384,5 +407,7 @@
         private System.Windows.Forms.Button btnGuardar;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
         private System.Windows.Forms.NumericUpDown txtNumPaginas;
+        private System.Windows.Forms.NumericUpDown txtCantidadRegistrada;
+        private DevExpress.XtraEditors.LabelControl labelControl9;
     }
 }
