@@ -30,6 +30,7 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNumRegistro = new DevExpress.XtraEditors.LabelControl();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.cbAutoresList = new System.Windows.Forms.ComboBox();
@@ -55,10 +56,12 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(554, 388);
             this.panelControl1.TabIndex = 0;
+            this.panelControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl1_Paint);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lblNumRegistro);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.cbAutoresList);
@@ -71,6 +74,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(530, 363);
             this.panel1.TabIndex = 0;
+            // 
+            // lblNumRegistro
+            // 
+            this.lblNumRegistro.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.lblNumRegistro.Location = new System.Drawing.Point(16, 90);
+            this.lblNumRegistro.Name = "lblNumRegistro";
+            this.lblNumRegistro.Size = new System.Drawing.Size(5, 19);
+            this.lblNumRegistro.TabIndex = 40;
+            this.lblNumRegistro.Text = ".";
             // 
             // btnCancelar
             // 
@@ -211,5 +223,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IdAutor;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
+        public DevExpress.XtraEditors.LabelControl lblNumRegistro;
     }
 }

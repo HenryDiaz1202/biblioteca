@@ -23,12 +23,20 @@ namespace Biblioteca.FormulariosCrud
 
         private void FrmDetalleDocumento_Load(object sender, EventArgs e)
         {
+            DataTable Datos_usuario = new DataTable();
+            MySqlCommand comando = new MySqlCommand();
+            string consulta = "select IdAutor,Nombres,Apellidos from Autores;";
+            comando.CommandText = consulta;
+            Datos_usuario = Conexion.Ejecutar(comando);
+            this.cbAutoresList.DataSource = Datos_usuario;
 
+            this.cbAutoresList.DisplayMember = "Nombres";
+            this.cbAutoresList.ValueMember = "IdAutor";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dtAutoresDoc.Rows.Add(txtIdDocm.Text,cbAutoresList.Text);
+            dtAutoresDoc.Rows.Add(txtIdDocm.Text,cbAutoresList.SelectedValue.ToString());
         }
         private void limpiarcajas()
         {
@@ -68,6 +76,11 @@ namespace Biblioteca.FormulariosCrud
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             limpiarcajas();
+        }
+
+        private void panelControl1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

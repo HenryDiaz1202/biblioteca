@@ -64,6 +64,7 @@ namespace Biblioteca.FormulariosCrud
                 
                 FrmDetalleDocumento frmdetalledocumento = new FrmDetalleDocumento();
                 frmdetalledocumento.txtIdDocm.Text = txtIdDoc.Text;
+                frmdetalledocumento.lblNumRegistro.Text = txtCantidadRegistro.Text;
                 frmdetalledocumento.ShowDialog();
                 limpiarcajas();
             }
