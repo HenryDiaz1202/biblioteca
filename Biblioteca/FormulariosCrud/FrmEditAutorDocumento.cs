@@ -45,6 +45,8 @@ namespace Biblioteca.FormulariosCrud
             Datos_autores = Conexion.Ejecutar(comando_autores);
             dtAutoresDoc.DataSource = Datos_autores;
 
+            checkedListBox1.Items.Add(Datos_autores);
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

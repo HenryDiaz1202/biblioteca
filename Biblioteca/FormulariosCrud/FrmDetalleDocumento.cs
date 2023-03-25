@@ -25,12 +25,12 @@ namespace Biblioteca.FormulariosCrud
         {
             DataTable Datos_usuario = new DataTable();
             MySqlCommand comando = new MySqlCommand();
-            string consulta = "select IdAutor,Nombres,Apellidos from Autores;";
+            string consulta = "select IdAutor, Concat (Nombres, ' ' ,Apellidos) as Autor from Autores;";
             comando.CommandText = consulta;
             Datos_usuario = Conexion.Ejecutar(comando);
             this.cbAutoresList.DataSource = Datos_usuario;
 
-            this.cbAutoresList.DisplayMember = "Nombres";
+            this.cbAutoresList.DisplayMember = "Autor";
             this.cbAutoresList.ValueMember = "IdAutor";
         }
 
@@ -40,7 +40,7 @@ namespace Biblioteca.FormulariosCrud
         }
         private void limpiarcajas()
         {
-            txtIdDocm.Text = "";
+            //txtIdDocm.Text = "";
             cbAutoresList.Text = "";
             dtAutoresDoc.Rows.Clear();
         }
@@ -77,6 +77,7 @@ namespace Biblioteca.FormulariosCrud
                   {
                       MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
                       limpiarcajas();
+                      txtIdDocm.Text = "";
                       this.Close();
                   }
              }

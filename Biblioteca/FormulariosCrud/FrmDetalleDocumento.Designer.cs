@@ -115,6 +115,7 @@
             // 
             // cbAutoresList
             // 
+            this.cbAutoresList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAutoresList.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbAutoresList.FormattingEnabled = true;
             this.cbAutoresList.Location = new System.Drawing.Point(186, 45);

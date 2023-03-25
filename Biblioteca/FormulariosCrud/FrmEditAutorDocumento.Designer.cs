@@ -38,6 +38,7 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtIdDocm = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -59,6 +60,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.checkedListBox1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.btnGuardar);
             this.panel1.Controls.Add(this.cbAutoresList);
@@ -67,7 +69,7 @@
             this.panel1.Controls.Add(this.labelControl1);
             this.panel1.Controls.Add(this.txtIdDocm);
             this.panel1.Controls.Add(this.labelControl2);
-            this.panel1.Location = new System.Drawing.Point(14, 12);
+            this.panel1.Location = new System.Drawing.Point(15, 15);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(530, 392);
             this.panel1.TabIndex = 0;
@@ -100,6 +102,7 @@
             // 
             // cbAutoresList
             // 
+            this.cbAutoresList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbAutoresList.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.cbAutoresList.FormattingEnabled = true;
             this.cbAutoresList.Location = new System.Drawing.Point(186, 72);
@@ -124,10 +127,10 @@
             // 
             this.dtAutoresDoc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtAutoresDoc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtAutoresDoc.Location = new System.Drawing.Point(16, 163);
+            this.dtAutoresDoc.Location = new System.Drawing.Point(186, 163);
             this.dtAutoresDoc.Name = "dtAutoresDoc";
             this.dtAutoresDoc.ReadOnly = true;
-            this.dtAutoresDoc.Size = new System.Drawing.Size(497, 163);
+            this.dtAutoresDoc.Size = new System.Drawing.Size(327, 163);
             this.dtAutoresDoc.TabIndex = 31;
             // 
             // labelControl1
@@ -157,6 +160,14 @@
             this.labelControl2.Size = new System.Drawing.Size(156, 19);
             this.labelControl2.TabIndex = 26;
             this.labelControl2.Text = "Código de documento";
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(16, 163);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(127, 212);
+            this.checkedListBox1.TabIndex = 43;
             // 
             // FrmEditAutorDocumento
             // 
@@ -191,6 +202,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl1;
         public DevExpress.XtraEditors.TextEdit txtIdDocm;
         private DevExpress.XtraEditors.LabelControl labelControl2;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
 
     }
 }

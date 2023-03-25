@@ -30,6 +30,7 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtCantidadRegistrada = new System.Windows.Forms.NumericUpDown();
             this.labelControl9 = new DevExpress.XtraEditors.LabelControl();
             this.txtNumPaginas = new System.Windows.Forms.NumericUpDown();
@@ -54,7 +55,6 @@
             this.txtIdDocumento = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -109,6 +109,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(917, 525);
             this.panel1.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkMagenta;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 15.25F);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(651, 246);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(245, 37);
+            this.button1.TabIndex = 48;
+            this.button1.Text = "Modificar autores";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtCantidadRegistrada
             // 
@@ -358,20 +372,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(875, 190);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkMagenta;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 15.25F);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(651, 246);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(245, 37);
-            this.button1.TabIndex = 48;
-            this.button1.Text = "Modificar autores";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FrmListaDocumentos
             // 
