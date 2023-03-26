@@ -26,13 +26,12 @@ namespace Biblioteca.FormulariosCrud
             DataTable Datos_autores = new DataTable();
             MySqlCommand comando_autores = new MySqlCommand();
 
-
-            string consulta = "select IdAutor,Nombres,Apellidos from Autores;";
+            string consulta = "select IdAutor, Concat (Nombres, ' ' ,Apellidos) as Autor from Autores;";
             comando.CommandText = consulta;
             Datos_usuario = Conexion.Ejecutar(comando);
             this.cbAutoresList.DataSource = Datos_usuario;
 
-            this.cbAutoresList.DisplayMember = "Nombres";
+            this.cbAutoresList.DisplayMember = "Autor";
             this.cbAutoresList.ValueMember = "IdAutor";
 
 
@@ -45,7 +44,6 @@ namespace Biblioteca.FormulariosCrud
             Datos_autores = Conexion.Ejecutar(comando_autores);
             dtAutoresDoc.DataSource = Datos_autores;
 
-            checkedListBox1.Items.Add(Datos_autores);
 
         }
 
@@ -61,12 +59,70 @@ namespace Biblioteca.FormulariosCrud
 
         private void button3_Click(object sender, EventArgs e)
         {
-            dtAutoresDoc.Rows.Add(txtIdDocm.Text, cbAutoresList.SelectedValue.ToString());
+            dtUpdateActs.Rows.Add(txtIdDocm.Text, cbAutoresList.SelectedValue.ToString());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void dtAutoresDoc_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            dtUpdateActs.Rows.Add((String)dtAutoresDoc.CurrentRow.Cells[0].Value, (String)dtAutoresDoc.CurrentRow.Cells[1].Value);
+        }
+
+        private void dtUpdateActs_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            MySqlCommand comando_borar = new MySqlCommand();
+            MySqlCommand comando_ingresar = new MySqlCommand();
+
+            string ID = txtIdDocm.Text;
+
+            string consulta = "INSERT INTO detalledocumento (IdDocumento, IdAutor) values (@IdDocumento, @IdAutor)";
+            string orden = "Delete from DetalleDocumento where IdDocumento=@IdDocumento;";
+            int result = 0;
+
+            comando_borar.Parameters.Add("@IdDocumento", MySqlDbType.VarChar).Value = ID;
+            comando_borar.CommandText = orden;
+            int resultado = Conexion.EjecutarOrden(comando_borar);
+            if (resultado > 0)
+            {
+                foreach (DataGridViewRow row in dtUpdateActs.Rows)
+                {
+                    comando_ingresar.Parameters.Clear();
+                    comando_ingresar.Parameters.AddWithValue("@IdDocumento", Convert.ToString(row.Cells["IdDocumento"].Value));
+                    comando_ingresar.Parameters.AddWithValue("@IdAutor", Convert.ToString(row.Cells["IdAutor"].Value));
+                    comando_ingresar.CommandText = consulta;
+                    result = Conexion.EjecutarOrden(comando_ingresar);
+                }
+                if (result > 0)
+                {
+                    MessageBox.Show("Datos ingresados correctamete!!!!!", "INFORMACION", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Error al ingresar los datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+            }
+        }
+
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            dtUpdateActs.Rows.Clear();
         }
     }
 }
