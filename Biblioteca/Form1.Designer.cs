@@ -51,8 +51,6 @@
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup2 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup3 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonPage3 = new DevExpress.XtraBars.Ribbon.RibbonPage();
-            this.ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPage4 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup6 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribbonPageGroup7 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -60,6 +58,10 @@
             this.ribbonPage2 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
+            this.ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.barButtonItem17 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem18 = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem19 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -84,13 +86,14 @@
             this.barButtonItem13,
             this.barButtonItem14,
             this.barButtonItem15,
-            this.barButtonItem16});
+            this.barButtonItem16,
+            this.barButtonItem18,
+            this.barButtonItem19});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
-            this.ribbonControl1.MaxItemId = 18;
+            this.ribbonControl1.MaxItemId = 20;
             this.ribbonControl1.Name = "ribbonControl1";
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonPage1,
-            this.ribbonPage3,
             this.ribbonPage4,
             this.ribbonPage2});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
@@ -288,6 +291,7 @@
             this.barButtonItem13.ItemAppearance.Pressed.Options.UseFont = true;
             this.barButtonItem13.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem13.LargeGlyph")));
             this.barButtonItem13.Name = "barButtonItem13";
+            this.barButtonItem13.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem13_ItemClick);
             // 
             // barButtonItem14
             // 
@@ -337,6 +341,7 @@
             this.ribbonPage1.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
             this.ribbonPage1.Appearance.Options.UseFont = true;
             this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup9,
             this.ribbonPageGroup1,
             this.ribbonPageGroup2,
             this.ribbonPageGroup3});
@@ -363,22 +368,6 @@
             this.ribbonPageGroup3.ItemLinks.Add(this.barButtonItem6);
             this.ribbonPageGroup3.Name = "ribbonPageGroup3";
             this.ribbonPageGroup3.Text = "Usuarios";
-            // 
-            // ribbonPage3
-            // 
-            this.ribbonPage3.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.ribbonPage3.Appearance.Options.UseFont = true;
-            this.ribbonPage3.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
-            this.ribbonPageGroup5});
-            this.ribbonPage3.Name = "ribbonPage3";
-            this.ribbonPage3.Text = "Préstamos";
-            // 
-            // ribbonPageGroup5
-            // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem12);
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem13);
-            this.ribbonPageGroup5.Name = "ribbonPageGroup5";
-            this.ribbonPageGroup5.Text = "Préstamos";
             // 
             // ribbonPage4
             // 
@@ -431,6 +420,57 @@
             this.xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InActiveTabPageHeaderAndOnMouseHover;
             this.xtraTabbedMdiManager1.MdiParent = this;
             // 
+            // ribbonPageGroup9
+            // 
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem19);
+            this.ribbonPageGroup9.ItemLinks.Add(this.barButtonItem18);
+            this.ribbonPageGroup9.Name = "ribbonPageGroup9";
+            this.ribbonPageGroup9.Text = "Sobre Préstamo";
+            // 
+            // barButtonItem17
+            // 
+            this.barButtonItem17.Caption = "Nuevo";
+            this.barButtonItem17.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.Glyph")));
+            this.barButtonItem17.Id = 13;
+            this.barButtonItem17.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem17.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem17.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem17.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem17.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem17.ItemAppearance.Pressed.Options.UseFont = true;
+            this.barButtonItem17.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem17.LargeGlyph")));
+            this.barButtonItem17.Name = "barButtonItem17";
+            // 
+            // barButtonItem18
+            // 
+            this.barButtonItem18.Caption = "Péstamo nuevo";
+            this.barButtonItem18.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.Glyph")));
+            this.barButtonItem18.Id = 18;
+            this.barButtonItem18.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem18.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem18.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem18.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem18.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem18.ItemAppearance.Pressed.Options.UseFont = true;
+            this.barButtonItem18.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.LargeGlyph")));
+            this.barButtonItem18.Name = "barButtonItem18";
+            this.barButtonItem18.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem18_ItemClick);
+            // 
+            // barButtonItem19
+            // 
+            this.barButtonItem19.Caption = "Préstamos - lista";
+            this.barButtonItem19.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.Glyph")));
+            this.barButtonItem19.Id = 19;
+            this.barButtonItem19.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem19.ItemAppearance.Hovered.Options.UseFont = true;
+            this.barButtonItem19.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem19.ItemAppearance.Normal.Options.UseFont = true;
+            this.barButtonItem19.ItemAppearance.Pressed.Font = new System.Drawing.Font("Tahoma", 11.25F);
+            this.barButtonItem19.ItemAppearance.Pressed.Options.UseFont = true;
+            this.barButtonItem19.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.LargeGlyph")));
+            this.barButtonItem19.Name = "barButtonItem19";
+            this.barButtonItem19.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem19_ItemClick);
+            // 
             // Form1
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -472,10 +512,8 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
-        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
         private DevExpress.XtraBars.BarButtonItem barButtonItem13;
-        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup5;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage4;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup7;
@@ -483,6 +521,10 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem14;
         private DevExpress.XtraBars.BarButtonItem barButtonItem15;
         private DevExpress.XtraBars.BarButtonItem barButtonItem16;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem18;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem19;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup9;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem17;
     }
 }
 

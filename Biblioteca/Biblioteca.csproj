@@ -91,6 +91,12 @@
     <Compile Include="FormulariosCrud\FrmAgregarDocumento.Designer.cs">
       <DependentUpon>FrmAgregarDocumento.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormulariosCrud\FrmAgregarLector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosCrud\FrmAgregarLector.Designer.cs">
+      <DependentUpon>FrmAgregarLector.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormulariosCrud\FrmAgregarPrestamo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,12 @@
     </Compile>
     <Compile Include="FormulariosCrud\FrmDetalleDocumento.Designer.cs">
       <DependentUpon>FrmDetalleDocumento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormulariosCrud\FrmDetallePrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosCrud\FrmDetallePrestamo.Designer.cs">
+      <DependentUpon>FrmDetallePrestamo.cs</DependentUpon>
     </Compile>
     <Compile Include="FormulariosCrud\FrmEditAutorDocumento.cs">
       <SubType>Form</SubType>
@@ -133,6 +145,12 @@
     <Compile Include="FormulariosCrud\FrmListaUsuarios.Designer.cs">
       <DependentUpon>FrmListaUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormulariosCrud\FrmRegistrarLectores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosCrud\FrmRegistrarLectores.Designer.cs">
+      <DependentUpon>FrmRegistrarLectores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -147,6 +165,9 @@
     <EmbeddedResource Include="FormulariosCrud\FrmAgregarDocumento.resx">
       <DependentUpon>FrmAgregarDocumento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosCrud\FrmAgregarLector.resx">
+      <DependentUpon>FrmAgregarLector.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormulariosCrud\FrmAgregarPrestamo.resx">
       <DependentUpon>FrmAgregarPrestamo.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosCrud\FrmDetalleDocumento.resx">
       <DependentUpon>FrmDetalleDocumento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosCrud\FrmDetallePrestamo.resx">
+      <DependentUpon>FrmDetallePrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosCrud\FrmEditAutorDocumento.resx">
       <DependentUpon>FrmEditAutorDocumento.cs</DependentUpon>
@@ -167,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosCrud\FrmListaUsuarios.resx">
       <DependentUpon>FrmListaUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosCrud\FrmRegistrarLectores.resx">
+      <DependentUpon>FrmRegistrarLectores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -223,6 +250,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1282956_close_delete_deny_no_out_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

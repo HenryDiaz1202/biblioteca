@@ -145,6 +145,11 @@
             // 
             this.txtNumPaginas.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.txtNumPaginas.Location = new System.Drawing.Point(23, 205);
+            this.txtNumPaginas.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             this.txtNumPaginas.Name = "txtNumPaginas";
             this.txtNumPaginas.Size = new System.Drawing.Size(154, 30);
             this.txtNumPaginas.TabIndex = 45;
