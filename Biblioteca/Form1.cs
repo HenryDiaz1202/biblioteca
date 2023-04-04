@@ -140,5 +140,19 @@ namespace Biblioteca
         {
 
         }
+
+        private void barButtonItem20_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmAgregarLector frmagregarlector = new FrmAgregarLector();
+            frmagregarlector.MdiParent = this;
+            frmagregarlector.Show();
+        }
+
+        private void barButtonItem21_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FrmListaLectores frmlistalectore = new FrmListaLectores();
+            frmlistalectore.MdiParent = this;
+            frmlistalectore.Show();
+        }
     }
 }

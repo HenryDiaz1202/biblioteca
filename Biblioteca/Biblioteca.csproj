@@ -139,6 +139,12 @@
     <Compile Include="FormulariosCrud\FrmListaDocumentos.Designer.cs">
       <DependentUpon>FrmListaDocumentos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormulariosCrud\FrmListaLectores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormulariosCrud\FrmListaLectores.Designer.cs">
+      <DependentUpon>FrmListaLectores.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormulariosCrud\FrmListaUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosCrud\FrmListaDocumentos.resx">
       <DependentUpon>FrmListaDocumentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormulariosCrud\FrmListaLectores.resx">
+      <DependentUpon>FrmListaLectores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormulariosCrud\FrmListaUsuarios.resx">
       <DependentUpon>FrmListaUsuarios.cs</DependentUpon>
