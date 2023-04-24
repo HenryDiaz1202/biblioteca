@@ -133,7 +133,9 @@ namespace Biblioteca
 
         private void barButtonItem19_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            FrmListaPrestamos frmlistaprestamos = new FrmListaPrestamos();
+            frmlistaprestamos.MdiParent = this;
+            frmlistaprestamos.Show();
         }
 
         private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

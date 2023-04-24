@@ -24,3 +24,4 @@ C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\D
 C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmDetallePrestamo.resources
 C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmAgregarLector.resources
 C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaLectores.resources
+C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaPrestamos.resources
