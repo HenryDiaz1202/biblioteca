@@ -108,7 +108,7 @@
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.Caption = "Lista de autores";
+            this.barButtonItem1.Caption = "Autores";
             this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
             this.barButtonItem1.Id = 1;
             this.barButtonItem1.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
@@ -123,7 +123,7 @@
             // 
             // barButtonItem2
             // 
-            this.barButtonItem2.Caption = "Nuevo autor";
+            this.barButtonItem2.Caption = "Nuevo";
             this.barButtonItem2.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.Glyph")));
             this.barButtonItem2.Id = 2;
             this.barButtonItem2.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
@@ -138,7 +138,7 @@
             // 
             // barButtonItem3
             // 
-            this.barButtonItem3.Caption = "Lista de documentos";
+            this.barButtonItem3.Caption = "Documentos";
             this.barButtonItem3.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.Glyph")));
             this.barButtonItem3.Id = 4;
             this.barButtonItem3.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
@@ -153,7 +153,7 @@
             // 
             // barButtonItem4
             // 
-            this.barButtonItem4.Caption = "Nuevo documento";
+            this.barButtonItem4.Caption = "Nuevo";
             this.barButtonItem4.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.Glyph")));
             this.barButtonItem4.Id = 5;
             this.barButtonItem4.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
@@ -168,7 +168,7 @@
             // 
             // barButtonItem5
             // 
-            this.barButtonItem5.Caption = "Lista de usuarios";
+            this.barButtonItem5.Caption = "Usuarios";
             this.barButtonItem5.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.Glyph")));
             this.barButtonItem5.Id = 6;
             this.barButtonItem5.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
@@ -183,7 +183,7 @@
             // 
             // barButtonItem6
             // 
-            this.barButtonItem6.Caption = "Nuevo usuario";
+            this.barButtonItem6.Caption = "Nuevo";
             this.barButtonItem6.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.Glyph")));
             this.barButtonItem6.Id = 7;
             this.barButtonItem6.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
@@ -315,7 +315,7 @@
             // 
             // barButtonItem15
             // 
-            this.barButtonItem15.Caption = "Reporte de autores";
+            this.barButtonItem15.Caption = "Autores";
             this.barButtonItem15.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem15.Glyph")));
             this.barButtonItem15.Id = 16;
             this.barButtonItem15.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
@@ -335,7 +335,7 @@
             // 
             // barButtonItem16
             // 
-            this.barButtonItem16.Caption = "Reporte de préstamos";
+            this.barButtonItem16.Caption = "Préstamos";
             this.barButtonItem16.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem16.Glyph")));
             this.barButtonItem16.Id = 17;
             this.barButtonItem16.ItemAppearance.Normal.Font = new System.Drawing.Font("Tahoma", 11.25F);
@@ -345,7 +345,7 @@
             // 
             // barButtonItem18
             // 
-            this.barButtonItem18.Caption = "Péstamo nuevo";
+            this.barButtonItem18.Caption = "Nuevo";
             this.barButtonItem18.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem18.Glyph")));
             this.barButtonItem18.Id = 18;
             this.barButtonItem18.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
@@ -360,7 +360,7 @@
             // 
             // barButtonItem19
             // 
-            this.barButtonItem19.Caption = "Lista de préstamos";
+            this.barButtonItem19.Caption = "Préstamos";
             this.barButtonItem19.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem19.Glyph")));
             this.barButtonItem19.Id = 19;
             this.barButtonItem19.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
@@ -375,7 +375,7 @@
             // 
             // barButtonItem20
             // 
-            this.barButtonItem20.Caption = "Nuevo lector";
+            this.barButtonItem20.Caption = "Nuevo";
             this.barButtonItem20.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem20.Glyph")));
             this.barButtonItem20.Id = 20;
             this.barButtonItem20.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);
@@ -390,7 +390,7 @@
             // 
             // barButtonItem21
             // 
-            this.barButtonItem21.Caption = "Lista de lectores";
+            this.barButtonItem21.Caption = "Lectores";
             this.barButtonItem21.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem21.Glyph")));
             this.barButtonItem21.Id = 21;
             this.barButtonItem21.ItemAppearance.Hovered.Font = new System.Drawing.Font("Tahoma", 11.25F);

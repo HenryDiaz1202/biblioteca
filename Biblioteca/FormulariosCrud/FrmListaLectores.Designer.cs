@@ -30,14 +30,12 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cbEtnia = new System.Windows.Forms.ComboBox();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.cbMunicipio = new System.Windows.Forms.ComboBox();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.cbSexo = new System.Windows.Forms.ComboBox();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.txtEdad = new System.Windows.Forms.NumericUpDown();
             this.txtApellidos = new DevExpress.XtraEditors.TextEdit();
@@ -46,22 +44,24 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtIdLector = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.cbEtnia = new System.Windows.Forms.ComboBox();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.cbMunicipio = new System.Windows.Forms.ComboBox();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.cbSexo = new System.Windows.Forms.ComboBox();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEdad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApellidos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdLector.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -77,6 +77,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cbEtnia);
             this.panel1.Controls.Add(this.labelControl8);
             this.panel1.Controls.Add(this.cbMunicipio);
@@ -103,6 +104,155 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(807, 499);
             this.panel1.TabIndex = 3;
+            // 
+            // cbEtnia
+            // 
+            this.cbEtnia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEtnia.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.cbEtnia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbEtnia.FormattingEnabled = true;
+            this.cbEtnia.Items.AddRange(new object[] {
+            "Garífuna",
+            "Mayangna",
+            "Mestizo",
+            "Miskito",
+            "Rama"});
+            this.cbEtnia.Location = new System.Drawing.Point(542, 213);
+            this.cbEtnia.Name = "cbEtnia";
+            this.cbEtnia.Size = new System.Drawing.Size(245, 31);
+            this.cbEtnia.Sorted = true;
+            this.cbEtnia.TabIndex = 48;
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.labelControl8.Location = new System.Drawing.Point(543, 188);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(35, 19);
+            this.labelControl8.TabIndex = 47;
+            this.labelControl8.Text = "Étnia";
+            // 
+            // cbMunicipio
+            // 
+            this.cbMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbMunicipio.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.cbMunicipio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbMunicipio.FormattingEnabled = true;
+            this.cbMunicipio.Items.AddRange(new object[] {
+            "Bonanza",
+            "Mulukukú",
+            "Rosita",
+            "Siuna",
+            "Waslala"});
+            this.cbMunicipio.Location = new System.Drawing.Point(284, 213);
+            this.cbMunicipio.Name = "cbMunicipio";
+            this.cbMunicipio.Size = new System.Drawing.Size(245, 31);
+            this.cbMunicipio.Sorted = true;
+            this.cbMunicipio.TabIndex = 46;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.labelControl6.Location = new System.Drawing.Point(285, 188);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(67, 19);
+            this.labelControl6.TabIndex = 45;
+            this.labelControl6.Text = "Municipio";
+            // 
+            // cbSexo
+            // 
+            this.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbSexo.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.cbSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbSexo.FormattingEnabled = true;
+            this.cbSexo.Items.AddRange(new object[] {
+            "Femenino",
+            "Masculino"});
+            this.cbSexo.Location = new System.Drawing.Point(21, 213);
+            this.cbSexo.Name = "cbSexo";
+            this.cbSexo.Size = new System.Drawing.Size(251, 31);
+            this.cbSexo.Sorted = true;
+            this.cbSexo.TabIndex = 44;
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.labelControl5.Location = new System.Drawing.Point(22, 189);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(34, 19);
+            this.labelControl5.TabIndex = 43;
+            this.labelControl5.Text = "Sexo";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.labelControl7.Location = new System.Drawing.Point(163, 121);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(35, 19);
+            this.labelControl7.TabIndex = 42;
+            this.labelControl7.Text = "Edad";
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.txtEdad.Location = new System.Drawing.Point(163, 145);
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Size = new System.Drawing.Size(109, 30);
+            this.txtEdad.TabIndex = 41;
+            // 
+            // txtApellidos
+            // 
+            this.txtApellidos.Location = new System.Drawing.Point(542, 146);
+            this.txtApellidos.Name = "txtApellidos";
+            this.txtApellidos.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.txtApellidos.Properties.Appearance.Options.UseFont = true;
+            this.txtApellidos.Size = new System.Drawing.Size(245, 30);
+            this.txtApellidos.TabIndex = 40;
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.labelControl3.Location = new System.Drawing.Point(542, 121);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(65, 19);
+            this.labelControl3.TabIndex = 39;
+            this.labelControl3.Text = "Apellidos";
+            // 
+            // txtNombres
+            // 
+            this.txtNombres.Location = new System.Drawing.Point(284, 146);
+            this.txtNombres.Name = "txtNombres";
+            this.txtNombres.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.txtNombres.Properties.Appearance.Options.UseFont = true;
+            this.txtNombres.Size = new System.Drawing.Size(245, 30);
+            this.txtNombres.TabIndex = 38;
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.labelControl4.Location = new System.Drawing.Point(284, 121);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(64, 19);
+            this.labelControl4.TabIndex = 37;
+            this.labelControl4.Text = "Nombres";
+            // 
+            // txtIdLector
+            // 
+            this.txtIdLector.Location = new System.Drawing.Point(21, 146);
+            this.txtIdLector.Name = "txtIdLector";
+            this.txtIdLector.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.txtIdLector.Properties.Appearance.Options.UseFont = true;
+            this.txtIdLector.Size = new System.Drawing.Size(130, 30);
+            this.txtIdLector.TabIndex = 36;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.labelControl2.Location = new System.Drawing.Point(21, 121);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(116, 19);
+            this.labelControl2.TabIndex = 35;
+            this.labelControl2.Text = "Código de lector";
             // 
             // simpleButton1
             // 
@@ -201,155 +351,6 @@
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // labelControl7
-            // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl7.Location = new System.Drawing.Point(163, 121);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(35, 19);
-            this.labelControl7.TabIndex = 42;
-            this.labelControl7.Text = "Edad";
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.txtEdad.Location = new System.Drawing.Point(163, 145);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(109, 30);
-            this.txtEdad.TabIndex = 41;
-            // 
-            // txtApellidos
-            // 
-            this.txtApellidos.Location = new System.Drawing.Point(542, 146);
-            this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.txtApellidos.Properties.Appearance.Options.UseFont = true;
-            this.txtApellidos.Size = new System.Drawing.Size(245, 30);
-            this.txtApellidos.TabIndex = 40;
-            // 
-            // labelControl3
-            // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl3.Location = new System.Drawing.Point(542, 121);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(65, 19);
-            this.labelControl3.TabIndex = 39;
-            this.labelControl3.Text = "Apellidos";
-            // 
-            // txtNombres
-            // 
-            this.txtNombres.Location = new System.Drawing.Point(284, 146);
-            this.txtNombres.Name = "txtNombres";
-            this.txtNombres.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.txtNombres.Properties.Appearance.Options.UseFont = true;
-            this.txtNombres.Size = new System.Drawing.Size(245, 30);
-            this.txtNombres.TabIndex = 38;
-            // 
-            // labelControl4
-            // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl4.Location = new System.Drawing.Point(284, 121);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(64, 19);
-            this.labelControl4.TabIndex = 37;
-            this.labelControl4.Text = "Nombres";
-            // 
-            // txtIdLector
-            // 
-            this.txtIdLector.Location = new System.Drawing.Point(21, 146);
-            this.txtIdLector.Name = "txtIdLector";
-            this.txtIdLector.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.txtIdLector.Properties.Appearance.Options.UseFont = true;
-            this.txtIdLector.Size = new System.Drawing.Size(130, 30);
-            this.txtIdLector.TabIndex = 36;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl2.Location = new System.Drawing.Point(21, 121);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(116, 19);
-            this.labelControl2.TabIndex = 35;
-            this.labelControl2.Text = "Código de lector";
-            // 
-            // cbEtnia
-            // 
-            this.cbEtnia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEtnia.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.cbEtnia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cbEtnia.FormattingEnabled = true;
-            this.cbEtnia.Items.AddRange(new object[] {
-            "Garífuna",
-            "Mayangna",
-            "Mestizo",
-            "Miskito",
-            "Rama"});
-            this.cbEtnia.Location = new System.Drawing.Point(542, 213);
-            this.cbEtnia.Name = "cbEtnia";
-            this.cbEtnia.Size = new System.Drawing.Size(245, 31);
-            this.cbEtnia.Sorted = true;
-            this.cbEtnia.TabIndex = 48;
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl8.Location = new System.Drawing.Point(543, 188);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(35, 19);
-            this.labelControl8.TabIndex = 47;
-            this.labelControl8.Text = "Étnia";
-            // 
-            // cbMunicipio
-            // 
-            this.cbMunicipio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbMunicipio.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.cbMunicipio.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cbMunicipio.FormattingEnabled = true;
-            this.cbMunicipio.Items.AddRange(new object[] {
-            "Bonanza",
-            "Mulukukú",
-            "Rosita",
-            "Siuna",
-            "Waslala"});
-            this.cbMunicipio.Location = new System.Drawing.Point(284, 213);
-            this.cbMunicipio.Name = "cbMunicipio";
-            this.cbMunicipio.Size = new System.Drawing.Size(245, 31);
-            this.cbMunicipio.Sorted = true;
-            this.cbMunicipio.TabIndex = 46;
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl6.Location = new System.Drawing.Point(285, 188);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(67, 19);
-            this.labelControl6.TabIndex = 45;
-            this.labelControl6.Text = "Municipio";
-            // 
-            // cbSexo
-            // 
-            this.cbSexo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbSexo.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.cbSexo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cbSexo.FormattingEnabled = true;
-            this.cbSexo.Items.AddRange(new object[] {
-            "Femenino",
-            "Masculino"});
-            this.cbSexo.Location = new System.Drawing.Point(21, 213);
-            this.cbSexo.Name = "cbSexo";
-            this.cbSexo.Size = new System.Drawing.Size(251, 31);
-            this.cbSexo.Sorted = true;
-            this.cbSexo.TabIndex = 44;
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.labelControl5.Location = new System.Drawing.Point(22, 189);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(34, 19);
-            this.labelControl5.TabIndex = 43;
-            this.labelControl5.Text = "Sexo";
-            // 
             // FrmListaLectores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -363,13 +364,13 @@
             this.panelControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEdad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtApellidos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombres.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtIdLector.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }

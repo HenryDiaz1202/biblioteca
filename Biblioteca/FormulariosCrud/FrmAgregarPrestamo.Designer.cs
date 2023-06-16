@@ -30,6 +30,8 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.tmHoraSalida = new System.Windows.Forms.DateTimePicker();
+            this.tmHoraEntrada = new System.Windows.Forms.DateTimePicker();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.button2 = new System.Windows.Forms.Button();
             this.txtIdPrestamo = new DevExpress.XtraEditors.TextEdit();
@@ -46,8 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.tmHoraEntrada = new System.Windows.Forms.DateTimePicker();
-            this.tmHoraSalida = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -68,6 +68,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.tmHoraSalida);
             this.panel1.Controls.Add(this.tmHoraEntrada);
             this.panel1.Controls.Add(this.linkLabel1);
@@ -91,6 +92,26 @@
             this.panel1.Size = new System.Drawing.Size(667, 300);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // tmHoraSalida
+            // 
+            this.tmHoraSalida.CalendarFont = new System.Drawing.Font("Tahoma", 10.25F);
+            this.tmHoraSalida.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.tmHoraSalida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.tmHoraSalida.Location = new System.Drawing.Point(161, 189);
+            this.tmHoraSalida.Name = "tmHoraSalida";
+            this.tmHoraSalida.Size = new System.Drawing.Size(139, 30);
+            this.tmHoraSalida.TabIndex = 54;
+            // 
+            // tmHoraEntrada
+            // 
+            this.tmHoraEntrada.CalendarFont = new System.Drawing.Font("Tahoma", 10.25F);
+            this.tmHoraEntrada.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.tmHoraEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.tmHoraEntrada.Location = new System.Drawing.Point(8, 189);
+            this.tmHoraEntrada.Name = "tmHoraEntrada";
+            this.tmHoraEntrada.Size = new System.Drawing.Size(147, 30);
+            this.tmHoraEntrada.TabIndex = 53;
             // 
             // linkLabel1
             // 
@@ -259,26 +280,6 @@
             this.labelControl1.Size = new System.Drawing.Size(186, 27);
             this.labelControl1.TabIndex = 15;
             this.labelControl1.Text = "Registrar préstamo";
-            // 
-            // tmHoraEntrada
-            // 
-            this.tmHoraEntrada.CalendarFont = new System.Drawing.Font("Tahoma", 10.25F);
-            this.tmHoraEntrada.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.tmHoraEntrada.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.tmHoraEntrada.Location = new System.Drawing.Point(8, 189);
-            this.tmHoraEntrada.Name = "tmHoraEntrada";
-            this.tmHoraEntrada.Size = new System.Drawing.Size(147, 30);
-            this.tmHoraEntrada.TabIndex = 53;
-            // 
-            // tmHoraSalida
-            // 
-            this.tmHoraSalida.CalendarFont = new System.Drawing.Font("Tahoma", 10.25F);
-            this.tmHoraSalida.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.tmHoraSalida.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.tmHoraSalida.Location = new System.Drawing.Point(161, 189);
-            this.tmHoraSalida.Name = "tmHoraSalida";
-            this.tmHoraSalida.Size = new System.Drawing.Size(139, 30);
-            this.tmHoraSalida.TabIndex = 54;
             // 
             // FrmAgregarPrestamo_cs
             // 

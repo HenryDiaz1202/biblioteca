@@ -25,3 +25,30 @@ C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\D
 C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmAgregarLector.resources
 C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaLectores.resources
 C:\Users\henry\documents\visual studio 2013\Projects\Biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaPrestamos.resources
+C:\proyectos\biblioteca\Biblioteca\bin\Debug\Biblioteca.exe.config
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.exe
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.pdb
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.csprojResolveAssemblyReference.cache
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.Form1.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.Form2.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmAgregarAutor.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmAgregarDocumento.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmAgregarLector.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmAgregarPrestamo_cs.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmAgregarUsuario.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmDetalleDocumento.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmDetallePrestamo.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmEditAutorDocumento.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaAutores.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaDocumentos.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaLectores.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaPrestamos.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmListaUsuarios.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.FormulariosCrud.FrmRegistrarLectores.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.Properties.Resources.resources
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.csproj.GenerateResource.Cache
+C:\proyectos\biblioteca\Biblioteca\obj\Debug\Biblioteca.exe.licenses
+C:\proyectos\biblioteca\Biblioteca\bin\Debug\Biblioteca.exe
+C:\proyectos\biblioteca\Biblioteca\bin\Debug\Biblioteca.pdb
+C:\proyectos\biblioteca\Biblioteca\bin\Debug\MySql.Data.dll
+C:\proyectos\biblioteca\Biblioteca\bin\Debug\MySqlBackup.dll

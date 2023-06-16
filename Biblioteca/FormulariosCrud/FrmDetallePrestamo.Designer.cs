@@ -30,6 +30,8 @@
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtIdPrestamo = new DevExpress.XtraEditors.TextEdit();
+            this.button1 = new System.Windows.Forms.Button();
             this.txtCantidad = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -37,23 +39,21 @@
             this.button3 = new System.Windows.Forms.Button();
             this.searchControl1 = new DevExpress.XtraEditors.SearchControl();
             this.dtRegistro = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtCargar = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txtIdPrestamo = new DevExpress.XtraEditors.TextEdit();
             this.IdPrestamo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IdDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Titu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.newD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtCargar = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdPrestamo.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRegistro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtCargar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdPrestamo.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -70,6 +70,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtIdPrestamo);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.txtCantidad);
@@ -86,6 +87,29 @@
             this.panel1.Size = new System.Drawing.Size(947, 364);
             this.panel1.TabIndex = 1;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // txtIdPrestamo
+            // 
+            this.txtIdPrestamo.Location = new System.Drawing.Point(18, 63);
+            this.txtIdPrestamo.Name = "txtIdPrestamo";
+            this.txtIdPrestamo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.txtIdPrestamo.Properties.Appearance.Options.UseFont = true;
+            this.txtIdPrestamo.Properties.ReadOnly = true;
+            this.txtIdPrestamo.Size = new System.Drawing.Size(115, 30);
+            this.txtIdPrestamo.TabIndex = 54;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 15.25F);
+            this.button1.Location = new System.Drawing.Point(178, 306);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(140, 38);
+            this.button1.TabIndex = 53;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtCantidad
             // 
@@ -175,49 +199,6 @@
             this.dtRegistro.Size = new System.Drawing.Size(447, 194);
             this.dtRegistro.TabIndex = 33;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12.25F);
-            this.label2.Location = new System.Drawing.Point(154, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 21);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Documentos (Título)";
-            // 
-            // dtCargar
-            // 
-            this.dtCargar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtCargar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtCargar.Location = new System.Drawing.Point(18, 99);
-            this.dtCargar.Name = "dtCargar";
-            this.dtCargar.Size = new System.Drawing.Size(459, 194);
-            this.dtCargar.TabIndex = 28;
-            this.dtCargar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtCargar_CellContentClick);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Lime;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 15.25F);
-            this.button1.Location = new System.Drawing.Point(178, 306);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 38);
-            this.button1.TabIndex = 53;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtIdPrestamo
-            // 
-            this.txtIdPrestamo.Location = new System.Drawing.Point(18, 63);
-            this.txtIdPrestamo.Name = "txtIdPrestamo";
-            this.txtIdPrestamo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.txtIdPrestamo.Properties.Appearance.Options.UseFont = true;
-            this.txtIdPrestamo.Properties.ReadOnly = true;
-            this.txtIdPrestamo.Size = new System.Drawing.Size(115, 30);
-            this.txtIdPrestamo.TabIndex = 54;
-            // 
             // IdPrestamo
             // 
             this.IdPrestamo.HeaderText = "Préstamo";
@@ -248,6 +229,26 @@
             this.newD.Name = "newD";
             this.newD.ReadOnly = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12.25F);
+            this.label2.Location = new System.Drawing.Point(154, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(164, 21);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Documentos (Título)";
+            // 
+            // dtCargar
+            // 
+            this.dtCargar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtCargar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtCargar.Location = new System.Drawing.Point(18, 99);
+            this.dtCargar.Name = "dtCargar";
+            this.dtCargar.Size = new System.Drawing.Size(459, 194);
+            this.dtCargar.TabIndex = 28;
+            this.dtCargar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtCargar_CellContentClick);
+            // 
             // FrmDetallePrestamo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -263,11 +264,11 @@
             this.panelControl1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtIdPrestamo.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchControl1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtRegistro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtCargar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtIdPrestamo.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

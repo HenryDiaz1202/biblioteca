@@ -75,6 +75,7 @@
             // 
             this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.cbEtnia);
             this.panel1.Controls.Add(this.labelControl8);
             this.panel1.Controls.Add(this.labelControl7);
